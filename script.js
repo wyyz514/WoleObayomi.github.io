@@ -5,6 +5,9 @@ $(document).ready(function(){
     var facebook = "facebook";
     var twitter = "Twitter";
     
+    
+    
+    $('.m_cont').animate({'top':'0px','opacity':'toggle'},1000);
     //icon events
     $('.fa.fa-paper-plane-o').bind('mouseover',function(event){
         typer(email, $('#email_t a'));

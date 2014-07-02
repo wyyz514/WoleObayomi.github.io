@@ -2,6 +2,7 @@ body
 {
     min-width:100%;
     background-color:#FAFAFA !important;
+    overflow:hidden;
 }
 
 .m_cont
@@ -9,6 +10,9 @@ body
     margin:auto;
     width:100%;
     padding-top:5%;
+    position:relative;
+    top:100px;
+    display:none;
 }
 
 .hdr
