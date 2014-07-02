@@ -1,7 +1,7 @@
 body
 {
     min-width:100%;
-    background-color:#FAFAFA !important;
+    background-color:#1BA39C !important;
     overflow:hidden;
 }
 
@@ -13,6 +13,7 @@ body
     position:relative;
     top:100px;
     display:none;
+    color:#fff;
 }
 
 .hdr
@@ -87,6 +88,7 @@ p.n_tt
 {
     font-size:5em;
     cursor:pointer;
+    color:#fff;
 }
 
 #email_t, #tw_t, #fb_t
