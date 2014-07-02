@@ -7,7 +7,7 @@ $(document).ready(function(){
     
     
     
-    $('.m_cont').animate({'top':'0px','opacity':'toggle'},1000);
+    $('.m_cont').animate({'top':'50px','opacity':'toggle'},1000);
     //icon events
     $('.fa.fa-paper-plane-o').bind('mouseover',function(event){
         typer(email, $('#email_t a'));
