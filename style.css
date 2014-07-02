@@ -30,7 +30,7 @@ p.n_tt
 
 .p_inf
 {
-    width:80%;
+    width:95%;
     margin:auto;
     position:relative;
     height:45px;
@@ -101,7 +101,7 @@ p.n_tt
 a
 {
     text-decoration:none;
-    color:#000 !important;
+    color:#fff !important;
     cursor:pointer;
     -webkit-transition-property:color;
     -moz-transition-property:color;
