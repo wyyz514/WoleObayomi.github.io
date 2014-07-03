@@ -39,7 +39,6 @@ p.n_tt
 .p_inf ul
 {
     list-style:none;
-    display:inline;
 }
 
 .p_inf ul li
@@ -54,6 +53,11 @@ p.n_tt
     -webkit-font-smoothing:antialiased;
     margin-left:15px;
     margin-right:15px;
+}
+
+.p_inf ul li:nth-child(1)
+{
+    margin-left:40px;
 }
 
 .upd_t
