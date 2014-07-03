@@ -30,7 +30,7 @@ p.n_tt
 
 .p_inf
 {
-    width:95%;
+    width:100%;
     margin:auto;
     position:relative;
     height:45px;
@@ -116,4 +116,55 @@ a:hover
 {
     text-decoration:none !important;
     color:#222 !important;
+}
+
+@media (max-width:768px),(max-width:1024px)
+{
+    body
+    {
+        overflow:scroll;
+    }
+    
+    .p_inf
+    {
+        width:100%;
+    }
+    
+    .p_inf ul
+    {
+        display:block;
+        float:left;
+        height:150px;
+        width:100%;
+        text-align:center;
+        padding: 0 !important;
+    }
+    
+    .p_inf ul li
+    {
+        width:100%;
+        font-size:15px;
+        text-align:center;
+        margin:0 !important;
+    }
+    
+    .hdr
+    {
+        width:100%;
+        display:block;
+    }
+    
+    .icons
+    {
+        width:100%;
+    }
+    
+    .icons>div
+    {
+        width:100%;
+        text-align:center;
+        border-bottom:1px dashed;
+        margin:0 !important;
+        padding-top:20px;
+    }
 }
