@@ -1,0 +1,100 @@
+@import url("http://fonts.googleapis.com/css?family=Montserrat");
+
+body
+{
+  margin:0 !important;
+}
+
+#bg
+{
+  background-image:url("/assets/img/bd3.jpg");
+  height:100%;
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:bottom center;
+}
+
+#splash
+{
+  width:75%;
+  margin:auto;
+  height:auto;
+  position:relative;
+  top:185px;
+  z-index:50;
+}
+
+#pp-wrap
+{
+  width:10%;
+  margin:auto;
+  text-align:center;
+}
+
+#pp
+{
+  height:100%;
+  width:100%;
+  border-radius:5px;
+  box-shadow:5px 5px 0px #EF4836;
+/*  border:5px solid #EF4836;*/
+}
+
+#name-wrap
+{
+  height:auto;
+  width:75%;
+  margin:auto;
+  line-height:10px;
+  text-align:center;
+}
+
+.nametxt
+{
+  color:#EF4836;
+  font-family:Montserrat;
+  font-weight:bold;
+  text-transform:uppercase;
+}
+
+#mni
+{
+  font-size:2em;
+  letter-spacing:4px;
+}
+
+#name
+{
+  font-size:2.75em;
+}
+
+#soci-wrap
+{
+  width:75%;
+  margin:auto;
+}
+
+#soci-wrap ul
+{
+  width:80%;
+  margin:auto;
+  text-align:center;
+  list-style:none;
+}
+
+#soci-wrap ul li
+{
+  display:inline-block;
+  width:15%;
+}
+
+#soci-wrap ul li i
+{
+  color:#EF4836;
+  font-size:2em;
+  cursor:pointer;
+}

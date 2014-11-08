@@ -1,0 +1,174 @@
+body
+{
+    min-width:100%;
+    background-color:#1BA39C !important;
+    overflow:hidden;
+}
+
+.m_cont
+{
+    margin:auto;
+    width:100%;
+    padding-top:5%;
+    position:relative;
+    top:100px;
+    display:none;
+    color:#fff;
+}
+
+.hdr
+{
+    text-align:center;
+    position:relative;
+}
+
+p.n_tt
+{
+    font-family:Shadows Into Light;
+    font-size:4em;
+}
+
+.p_inf
+{
+    width:100%;
+    margin:auto;
+    position:relative;
+    height:45px;
+}
+
+.p_inf ul
+{
+    list-style:none;
+}
+
+.p_inf ul li
+{
+    float:left;
+    display:none;
+    position:relative;
+    left:-50px;
+    font-family:Poiret One;
+    font-size:16px;
+    font-weight:bold;
+    -webkit-font-smoothing:antialiased;
+    margin-left:15px;
+    margin-right:15px;
+}
+
+.p_inf ul li:nth-child(1)
+{
+    margin-left:40px;
+}
+
+.upd_t
+{
+    text-decoration:underline;
+    display:none;
+}
+
+.contact
+{
+    width:100%;
+    height:290px;
+}
+
+.icons
+{
+    margin:auto;
+    width:60%;
+    height:70%;
+}
+
+.icons>div
+{
+    width:30%;
+    height:60%;
+    float:left;
+    margin-left:20px;
+    text-align:center;
+}
+
+.fa
+{
+    font-size:5em;
+    cursor:pointer;
+    color:#fff;
+}
+
+#email_t, #tw_t, #fb_t
+{
+    font-family:Poiret One;
+    font-size:20px;
+    text-align:center;
+}
+
+a
+{
+    text-decoration:none;
+    color:#fff !important;
+    cursor:pointer;
+    -webkit-transition-property:color;
+    -moz-transition-property:color;
+    -o-transition-property:color;
+    -webkit-transition-duration:1s;
+    -moz-transition-duration:1s;
+    -o-transition-duration:1s;
+    transition-timing-function:ease-in-out;
+}
+
+a:hover
+{
+    text-decoration:none !important;
+    color:#222 !important;
+}
+
+@media (max-width:768px),(max-width:1024px)
+{
+    body
+    {
+        overflow:scroll;
+    }
+    
+    .p_inf
+    {
+        width:100%;
+    }
+    
+    .p_inf ul
+    {
+        display:block;
+        float:left;
+        height:150px;
+        width:100%;
+        text-align:center;
+        padding: 0 !important;
+    }
+    
+    .p_inf ul li
+    {
+        width:100%;
+        font-size:15px;
+        text-align:center;
+        margin:0 !important;
+    }
+    
+    .hdr
+    {
+        width:100%;
+        display:block;
+    }
+    
+    .icons
+    {
+        width:100%;
+    }
+    
+    .icons>div
+    {
+        width:100%;
+        text-align:center;
+        border-bottom:1px dashed;
+        margin:0 !important;
+        padding-top:20px;
+    }
+}
