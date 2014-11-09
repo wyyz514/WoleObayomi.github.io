@@ -6,6 +6,40 @@ body
   display:none;
 }
 
+#shooting-star
+{
+  position:absolute;
+  top:20px;
+  z-index:55;
+}
+
+#star-wrap
+{
+  width:200px;
+  -webkit-transform:rotate(25deg);
+  -webkit-filter:opacity(0.1);
+  position:absolute;
+}
+
+#star
+{
+  height:4px;
+  width:5px;
+  position:relative;
+  border-top-right-radius:100%;
+  border-bottom-right-radius:100%;
+  background-color:#fff;
+  float:left;
+}
+
+#trail
+{
+  border-right:160px solid #fff;
+  border-top:2px solid transparent;
+  border-bottom:2px solid transparent;
+  float:left;
+}
+
 #bg
 {
   background-image:url("/assets/img/bd3.jpg");
