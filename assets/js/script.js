@@ -32,7 +32,7 @@ $(document).ready(function(){
     function updatePos()
     {
 //      console.log("Updating position: ["+ss.x+":"+ss.y+"]");
-      if(window.innerHeight + 200 < ss.y || window.innerWidth + 200 < ss.x)
+      if(window.innerHeight + 100 < ss.y || window.innerWidth + 100 < ss.x)
       {
         var starWrap = document.querySelector("#star-wrap");
         $(starWrap).remove();
