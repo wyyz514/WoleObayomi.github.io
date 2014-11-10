@@ -26,6 +26,14 @@ body
   width:250px;
   -webkit-transform:rotate(25deg);
   -webkit-filter:opacity(0.1);
+  -moz-transform:rotate(25deg);
+  -moz-filter:opacity(0.1);
+  -o-transform:rotate(25deg);
+  -o-filter:opacity(0.1);
+  -ms-transform:rotate(25deg);
+  -ms-filter:opacity(0.1);
+  transform:rotate(25deg);
+  filter:opacity(0.1);
   position:absolute;
 }
 
