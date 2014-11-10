@@ -13,8 +13,8 @@ $(document).ready(function(){
     var target = document.querySelector("#shooting-star");
     var ss = {
       template:"<div id='star-wrap'><div id='trail'></div><div id='star'></div></div>",
-      x:0,
-      y:0
+      x:-100,
+      y:-100
     };
     //create shooting star
     function createSS()
@@ -23,6 +23,8 @@ $(document).ready(function(){
       target.innerHTML = ss.template;
       var starWrap = document.querySelector('#star-wrap');
       //initialize position
+      //randomize x coord so it doesn't look like the star is appearing from the same position each time
+      ss.x = Math.floor(Math.random() * window.innerWidth); 
       starWrap.style.top = ss.y+"px";
       starWrap.style.left = ss.x+"px";
     }
@@ -30,7 +32,7 @@ $(document).ready(function(){
     function updatePos()
     {
 //      console.log("Updating position: ["+ss.x+":"+ss.y+"]");
-      if(window.innerHeight - 200 < ss.y && (window.innerWidth/2) - 300 < ss.x)
+      if(window.innerHeight + 665 < ss.y || window.innerWidth + 665 < ss.x)
       {
         var starWrap = document.querySelector("#star-wrap");
         $(starWrap).remove();
@@ -52,21 +54,20 @@ $(document).ready(function(){
       var starWrap = document.querySelector("#star-wrap");
       starWrap.style.top = ss.y+"px";
       starWrap.style.left = ss.x+"px";
-      requestAnimationFrame(siteObj.init);
+      requestAnimationFrame(start);
     }
     
-    function init()
+    function start()
     {
       updatePos();
     }
     
-    
     return {
       createSS:createSS,
-      init:init
+      start:start
     };
   })();
   
     siteObj.createSS();
-    requestAnimationFrame(siteObj.init);
+    requestAnimationFrame(siteObj.start);
 });
