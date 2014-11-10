@@ -4,6 +4,7 @@ body
 {
   margin:0 !important;
   display:none;
+  overflow:hidden;
 }
 
 #shooting-star
@@ -15,7 +16,7 @@ body
 
 #star-wrap
 {
-  width:200px;
+  width:250px;
   -webkit-transform:rotate(25deg);
   -webkit-filter:opacity(0.1);
   position:absolute;
@@ -23,7 +24,7 @@ body
 
 #star
 {
-  height:4px;
+  height:2px;
   width:5px;
   position:relative;
   border-top-right-radius:100%;
@@ -34,9 +35,9 @@ body
 
 #trail
 {
-  border-right:160px solid #fff;
-  border-top:2px solid transparent;
-  border-bottom:2px solid transparent;
+  border-right:180px solid #fff;
+  border-top:1px solid transparent;
+  border-bottom:1px solid transparent;
   float:left;
 }
 
