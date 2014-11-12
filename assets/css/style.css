@@ -29,7 +29,6 @@ body
   -o-transform:rotate(25deg);
   -ms-transform:rotate(25deg);
   transform:rotate(25deg);
-  opacity:0.05;
   position:absolute;
 }
 
@@ -40,13 +39,14 @@ body
   position:relative;
   border-top-right-radius:100%;
   border-bottom-right-radius:100%;
-  background-color:#fff;
+/*  background-color:#fff;*/
+    background-color:#00FF00;
   float:left;
 }
 
 #trail
 {
-  border-right:180px solid #fff;
+  border-right:180px solid #00FF00;
   border-top:1px solid transparent;
   border-bottom:1px solid transparent;
   float:left;
@@ -124,17 +124,6 @@ body
   margin:auto;
 }
 
-#soci-desc
-{
-  position:absolute;
-  padding:5px;
-  left:30%;
-  width:40%;
-  margin:auto;
-  height:30px;
-/*  background-color:#000;*/
-}
-
 #soci-wrap ul
 {
   width:80%;
@@ -147,11 +136,11 @@ body
 {
   display:inline-block;
   width:15%;
-  cursor:pointer;
 }
 
 #soci-wrap ul li i
 {
   color:#EF4836;
+  cursor:pointer;
   font-size:2em;
 }

@@ -14,7 +14,8 @@ $(document).ready(function(){
     var ss = {
       template:"<div id='star-wrap'><div id='trail'></div><div id='star'></div></div>",
       x:-100,
-      y:-100
+      y:-100,
+      opacity:"0.1"
     };
     //create shooting star
     function createSS()
@@ -27,6 +28,7 @@ $(document).ready(function(){
       ss.x = Math.floor(Math.random() * window.innerWidth); 
       starWrap.style.top = ss.y+"px";
       starWrap.style.left = ss.x+"px";
+      starWrap.style.opacity = ss.opacity;
     }
    
     function updatePos()
@@ -38,12 +40,15 @@ $(document).ready(function(){
         $(starWrap).remove();
         ss.x = 0;
         ss.y = 0;
+        ss.opacity = "0.2";
         createSS();
       }
       var now = new Date();
       var diff = now - then;
       ss.x = ss.x + (20 * diff/100);
       ss.y = ss.y + (10 * diff/100);
+      ss.opacity = parseFloat(ss.opacity - (0.00085)).toFixed(5); //control fading out of stars
+      console.log(ss.opacity);
       render();
       then = now;
     }
@@ -54,6 +59,7 @@ $(document).ready(function(){
       var starWrap = document.querySelector("#star-wrap");
       starWrap.style.top = ss.y+"px";
       starWrap.style.left = ss.x+"px";
+      starWrap.style.opacity = ss.opacity;
       requestAnimationFrame(start);
     }
     
