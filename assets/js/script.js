@@ -40,14 +40,14 @@ $(document).ready(function(){
         $(starWrap).remove();
         ss.x = 0;
         ss.y = 0;
-        ss.opacity = "0.2";
+        ss.opacity = "0.15";
         createSS();
       }
       var now = new Date();
       var diff = now - then;
       ss.x = ss.x + (20 * diff/100);
       ss.y = ss.y + (10 * diff/100);
-      ss.opacity = parseFloat(ss.opacity - (0.00085)).toFixed(5); //control fading out of stars
+      ss.opacity = parseFloat(ss.opacity - (0.00055)).toFixed(5); //control fading out of stars
       console.log(ss.opacity);
       render();
       then = now;
