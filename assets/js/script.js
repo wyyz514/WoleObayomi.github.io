@@ -25,7 +25,7 @@ $(document).ready(function(){
       var starWrap = document.querySelector('#star-wrap');
       //initialize position
       //randomize x coord so it doesn't look like the star is appearing from the same position each time
-      ss.x = Math.floor(Math.random() * window.innerWidth); 
+      ss.x = Math.floor(Math.random() * window.innerWidth - 50); 
       starWrap.style.top = ss.y+"px";
       starWrap.style.left = ss.x+"px";
       starWrap.style.opacity = ss.opacity;
