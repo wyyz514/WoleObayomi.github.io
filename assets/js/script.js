@@ -25,7 +25,7 @@ $(document).ready(function(){
       var starWrap = document.querySelector('#star-wrap');
       //initialize position
       //randomize x coord so it doesn't look like the star is appearing from the same position each time
-      ss.x = Math.floor(Math.random() * window.innerWidth - 50); 
+      ss.x = Math.floor(Math.random() * window.innerWidth); 
       starWrap.style.top = ss.y+"px";
       starWrap.style.left = ss.x+"px";
       starWrap.style.opacity = ss.opacity;
@@ -47,7 +47,7 @@ $(document).ready(function(){
       var diff = now - then;
       ss.x = ss.x + (20 * diff/100);
       ss.y = ss.y + (10 * diff/100);
-      ss.opacity = parseFloat(ss.opacity - (0.00055)).toFixed(5); //control fading out of stars
+      ss.opacity = parseFloat(ss.opacity - (0.0008)).toFixed(5); //control fading out of stars
       console.log(ss.opacity);
       render();
       then = now;

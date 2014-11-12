@@ -120,13 +120,13 @@ body
 
 #soci-wrap
 {
-  width:75%;
+  width:90%;
   margin:auto;
 }
 
 #soci-wrap ul
 {
-  width:80%;
+  width:45%;
   margin:auto;
   text-align:center;
   list-style:none;
@@ -135,7 +135,8 @@ body
 #soci-wrap ul li
 {
   display:inline-block;
-  width:15%;
+  width:18%;
+  margin-left:-20px;
 }
 
 #soci-wrap ul li i
