@@ -39,14 +39,15 @@ body
   position:relative;
   border-top-right-radius:100%;
   border-bottom-right-radius:100%;
-/*  background-color:#fff;*/
-    background-color:#00FF00;
+  background-color:#fff;
+/*  background-color:#00FF00;*/
   float:left;
 }
 
 #trail
 {
-  border-right:180px solid #00FF00;
+  border-right:80px solid #fff;
+/*  border-right:180px solid #00FF00;*/
   border-top:1px solid transparent;
   border-bottom:1px solid transparent;
   float:left;
