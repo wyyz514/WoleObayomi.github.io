@@ -40,7 +40,7 @@ $(document).ready(function(){
         $(starWrap).remove();
         ss.x = 0;
         ss.y = 0;
-        ss.opacity = "0.05";
+        ss.opacity = "0.15";
         createSS();
       }
       var now = new Date();
