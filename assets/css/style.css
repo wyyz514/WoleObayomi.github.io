@@ -1,148 +1,128 @@
-@import url("http://fonts.googleapis.com/css?family=Montserrat|Viga");
-
 body
 {
   margin:0 !important;
-  display:none;
-}
-
-#page
-{
-  position:fixed; 
-  overflow:hidden; 
-  height:100%; 
-  width:100%;
-}
-
-#shooting-star
-{
-  position:absolute;
-  top:20px;
-  z-index:55;
-}
-
-#star-wrap
-{
-  width:250px;
-  -webkit-transform:rotate(25deg);
-  -moz-transform:rotate(25deg);
-  -o-transform:rotate(25deg);
-  -ms-transform:rotate(25deg);
-  transform:rotate(25deg);
-  position:absolute;
-}
-
-#star
-{
-  height:2px;
-  width:5px;
-  position:relative;
-  border-top-right-radius:100%;
-  border-bottom-right-radius:100%;
-  background-color:#fff;
-/*  background-color:#00FF00;*/
-  float:left;
-}
-
-#trail
-{
-  border-right:80px solid #fff;
-/*  border-right:180px solid #00FF00;*/
-  border-top:1px solid transparent;
-  border-bottom:1px solid transparent;
-  float:left;
-}
-
-#bg
-{
-  background-image:url("/assets/img/bd3.jpg");
-  height:100%;
-  width:100%;
-  position:absolute;
-  top:0;
-  left:0;
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-position:bottom center;
+  overflow:hidden;
 }
 
 #splash
 {
-  width:75%;
-  margin:auto;
+  position:absolute;
+  height:100%;
+  width:100%;
+  background-image:url("/assets/img/bd3.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:bottom left;
+}
+
+#basicinfo
+{
   height:auto;
+  width:40%;
+  margin:auto;
   position:relative;
-  top:185px;
-  z-index:50;
+  top:250px;
 }
 
 #pp-wrap
 {
-  width:10%;
+  height:100px;
+  width:100px;
   margin:auto;
-  text-align:center;
 }
 
 #pp
 {
   height:100%;
   width:100%;
-  border-radius:100px;
-  -webkit-filter:brightness(1.1);
+  border-radius:100%;
 }
 
-#name-wrap
+#bio #mni, #bio #name
 {
-  height:auto;
-  width:75%;
-  margin:auto;
-  line-height:10px;
+  height:45px;
   text-align:center;
-}
-
-.nametxt
-{
-  color:#EF4836;
   font-family:Montserrat;
-  font-weight:bold;
   text-transform:uppercase;
+  line-height:45px;
+  font-size:30px;
+  letter-spacing:2px;
+  color:#EF4836;
 }
 
-#mni
+#bio #name
 {
-  font-size:2em;
-  letter-spacing:4px;
+  letter-spacing:0;
+  font-weight:bold;
+  font-size:35px;
 }
 
-#name
+#arrow
 {
-  font-size:2.75em;
-}
-
-#soci-wrap
-{
-  width:90%;
-  margin:auto;
-}
-
-#soci-wrap ul
-{
-  width:45%;
+  height:100px;
+  width:30%;
   margin:auto;
   text-align:center;
-  list-style:none;
+  line-height:100px;
 }
 
-#soci-wrap ul li
+#splash-chev
 {
-  display:inline-block;
-  width:18%;
-  margin-left:-20px;
-}
-
-#soci-wrap ul li i
-{
-  color:#EF4836;
   cursor:pointer;
-  font-size:2em;
+  position:relative;
+  top:0;
+  animation:fadeDrop 0.75s infinite;
+  -webkit-animation:fadeDrop 0.75s infinite;
+  -moz-animation:fadeDrop 0.75s infinite;
+}
+
+#content
+{
+  height:800px;
+  width:100%;
+}
+
+@keyframes fadeDrop
+{
+  0%
+  {
+    top:0;
+    opacity:1;
+  }
+  
+  100%
+  {
+    top:px;
+    opacity:0.5;
+  }
+}
+
+@-webkit-keyframes fadeDrop
+{
+  0%
+  {
+    top:0;
+    opacity:1;
+  }
+  
+  100%
+  {
+    top:10px;
+    opacity:0.5;
+  }
+}
+
+@-moz-keyframes fadeDrop
+{
+  0%
+  {
+    top:0;
+    opacity:1;
+  }
+  
+  100%
+  {
+    top:10px;
+    opacity:0.5;
+  }
 }

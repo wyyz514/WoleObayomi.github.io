@@ -5,35 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat"/>
     <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css"/>
     <title>Wole's Personal Website</title>
   </head>
   <body>  
-    <!--prevent scrolling when star is off screen-->
-    <div id="page">
-      <div id="shooting-star">
-      </div>
-      <div id="bg">
-      </div>
+    <div id="page" style="height:700px; width:100%; position:relative;">
       <div id="splash">
-        <div id="pp-wrap">
-          <img src="assets/img/pp.jpg" id="pp">
-        </div>
-        <div id="name-wrap">
-          <p class="nametxt" id="mni">My name is</p>
-          <p class="nametxt" id="name">Oluwole Obayomi</p>
-        </div>
-        <div id="soci-wrap">
-          <div id="soci-desc"></div>
-          <ul>
-            <li><i class="fa fa-envelope"></i></li>
-            <li><i class="fa fa-github"></i></li>
-            <li><i class="fa fa-facebook"></i></li>
-            <li><i class="fa fa-twitter"></i></li>
-            <li><i class="fa fa-linkedin"></i></li>
-          </ul>
+        <div id="basicinfo">
+          <div id="pp-wrap">
+            <img src="/assets/img/pp.jpg" id="pp"/>
+          </div>
+          <br>
+          <div id="bio-wrap">
+            <div id="bio">
+              <div id="mni">
+                My name is
+              </div>
+              <div id="name">Oluwole Obayomi</div>
+            </div>
+            <br><br>
+          </div>
+          <div id="arrow">
+            <i class="fa fa-chevron-down fa-2x" id="splash-chev" style="color:#EF4836;"></i>
+          </div>
         </div>
       </div>
+    </div>
+    <div id="content">
     </div>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="assets/js/script.js"></script>
