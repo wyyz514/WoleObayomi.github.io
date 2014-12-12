@@ -26,24 +26,48 @@ $(document).ready(function(){
      // console.log(states.scrollState);
     }
     
+    function toggleScrolled()
+    {
+      if(!states.isScrolled)
+      {
+        states.isScrolled = true;
+      }
+      else
+      {
+        states.isScrolled = false;
+      }
+    }
+    
+    function getScrolledBool()
+    {
+      return states.isScrolled;
+    }
+    
+    function getScrollState()
+    {
+      return states.scrollState;
+    }
+    
     return {
       manageScrollState:manageScrollState,
-      states:states //TODO:create getter
+      getScrollState:getScrollState,
+      getScrolledBool:getScrolledBool,
+      toggleScrolled:toggleScrolled
     };
   })();
   
   $(window).on("scroll",function(ev){
     ev.preventDefault();
     scrollManager.manageScrollState();
-    if(scrollManager.states.scrollState == "DOWN" && $(window).scrollTop() <= $("#content").offset().top && !scrollManager.states.isScrolled)
+    if(scrollManager.getScrollState() == "DOWN" && $(window).scrollTop() <= $("#content").offset().top && scrollManager.getScrolledBool() == false)
     {
       $("#splash-chev").trigger("click");
-      scrollManager.states.isScrolled = true;
+      scrollManager.toggleScrolled(); //true
     }
     
     if($(window).scrollTop() == 0)
     {
-      scrollManager.states.isScrolled = false;
+      scrollManager.toggleScrolled(); //false
     }
   });
   
