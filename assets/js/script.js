@@ -7,4 +7,13 @@ $(document).ready(function(){
     $(".menu").removeClass("active");
   });
   
+  $(document).on("mousewheel", function(){
+    var menu = document.querySelector(".menu");
+    if(menu.classList.contains("active"))
+    {
+      return false;
+    }
+    else
+      $('body').animate({scrollTop:$(".sect#two").offset().top},1000);
+  });
 });
