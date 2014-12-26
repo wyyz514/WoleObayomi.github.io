@@ -1,8 +1,28 @@
-@import url("http://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro");
+@import url("http://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro|Satisfy");
 body
 {
   margin:0 !important;
   overflow:hidden;
+  position:absolute;
+  height:100%;
+  width:100%;
+}
+
+::-webkit-scrollbar
+{
+  width:6px;
+}
+
+::-webkit-scrollbar-track
+{
+  background-color:#000;
+}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius:20px;
+  background-color:transparent;
+  border:1px solid #f0f0f0;
 }
 
 .sect
@@ -29,7 +49,7 @@ body
   left:0;
   position:fixed;
   background-color:#EF4836;
-  z-index:500;
+  z-index:999;
   transform-origin:left top;
   -webkit-transform:rotate(-90deg);
   -moz-transform:rotate(-90deg);
@@ -41,6 +61,11 @@ body
   -moz-transition:all 0.5s ease-in-out;
   -ms-transition:all 0.5s ease-in-out;
   -o-transition:all 0.5s ease-in-out;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -o-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
 }
 
 .menu.active
@@ -97,6 +122,11 @@ body
 .menu-btn
 {
   position:fixed;
+  -webkit-backface-visibility:hidden;
+  -moz-backface-visibility:hidden;
+  -ms-backface-visibility:hidden;
+  -o-backface-visibility:hidden;
+  backface-visibility:hidden;
   top:20px;
   left:20px;
   font-family:Source Sans Pro;
@@ -105,6 +135,7 @@ body
   display:inline-block;
   letter-spacing:3px;
   color:#EF4836;
+  z-index:499;
 }
 
 #poster
@@ -113,7 +144,7 @@ body
   width:50%;
   margin:auto;
   position:relative;
-  top:15%;
+  top:20%;
 }
 
 #poster-icon
@@ -151,7 +182,7 @@ body
   font-size:2em;
 }
 
-#lm
+#am
 {
   font-family:Source Sans Pro;
   color:#EF4836;
@@ -167,7 +198,42 @@ body
   -webkit-transition:all 0.2s cubic-bezier(.17,.67,0,1);
 }
 
-#lm:hover
+#am:hover
 {
   -webkit-transform:scale(0.85);
+}
+
+.sect#two
+{
+  top:100%;
+  background-color:#F7CA18;
+  z-index:4;
+}
+
+#intro
+{
+  position:relative;
+  margin:auto;
+  width:65%;
+  height:50%;
+  top:30%;
+}
+
+#name,#mni
+{
+  font-family:Montserrat;
+  text-transform:uppercase;
+  text-align:center;
+  width:100%;
+  font-size:3em;
+  font-weight:bold;
+  color:#2C3E50;
+}
+
+#sch
+{
+  font-family:Satisfy;
+  text-align:center;
+  font-size:1.5em;
+  color:red;
 }
