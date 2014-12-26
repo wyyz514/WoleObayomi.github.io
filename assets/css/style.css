@@ -56,9 +56,15 @@ body
 .close-btn
 {
   position:relative;
-  top:10px;
-  left:10px;
+  top:20px;
+  left:20px;
   cursor:pointer;
+  display:inline-block;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  color:#333;
+  font-family:Source Sans Pro;
+  font-size:14px;
 }
 
 #options
@@ -97,6 +103,7 @@ body
   font-size:14px;
   cursor:pointer;
   display:inline-block;
+  letter-spacing:3px;
   color:#EF4836;
 }
 
@@ -157,4 +164,10 @@ body
   text-align:center;
   font-size:14px;
   cursor:pointer;
+  -webkit-transition:all 0.2s cubic-bezier(.17,.67,0,1);
+}
+
+#lm:hover
+{
+  -webkit-transform:scale(0.85);
 }
