@@ -1,0 +1,160 @@
+@import url("http://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro");
+body
+{
+  margin:0 !important;
+  overflow:hidden;
+}
+
+.sect
+{
+  position:absolute;
+  left:0;
+  height:100%;
+  width:100%;
+}
+
+.sect#one
+{
+  top:0;
+  background-image:url("/assets/img/mazbg.png");
+  background-repeat:repeat;
+  background-size:50px;
+}
+
+.menu
+{
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  position:fixed;
+  background-color:#EF4836;
+  z-index:500;
+  transform-origin:left top;
+  -webkit-transform:rotate(-90deg);
+  -moz-transform:rotate(-90deg);
+  -ms-transform:rotate(-90deg);
+  -o-transform:rotate(-90deg);
+  transform:rotate(-90deg);
+  opacity:0;
+  -webkit-transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out;
+  -ms-transition:all 0.5s ease-in-out;
+  -o-transition:all 0.5s ease-in-out;
+}
+
+.menu.active
+{
+  -webkit-transform:rotate(0deg);
+  -moz-transform:rotate(0deg);
+  -ms-transform:rotate(0deg);
+  -o-transform:rotate(0deg);
+  transform:rotate(0deg);
+  opacity:1;
+}
+
+.close-btn
+{
+  position:relative;
+  top:10px;
+  left:10px;
+  cursor:pointer;
+}
+
+#options
+{
+  position:relative;
+  margin:auto;
+  top:30%;
+  height:60%;
+}
+
+.option
+{
+  font-family:Montserrat;
+  font-weight:bold;
+  text-transform:uppercase;
+  color:#333;
+  margin-bottom:20px;
+  font-size:2em;
+}
+
+#options-list
+{
+  padding:0 !important;
+  margin:0 !important;
+  width:100%;
+  text-align:center;
+  list-style:none;
+}
+
+.menu-btn
+{
+  position:fixed;
+  top:20px;
+  left:20px;
+  font-family:Source Sans Pro;
+  font-size:14px;
+  cursor:pointer;
+  display:inline-block;
+  color:#EF4836;
+}
+
+#poster
+{
+  height:80%;
+  width:50%;
+  margin:auto;
+  position:relative;
+  top:15%;
+}
+
+#poster-icon
+{
+  text-align:center;
+}
+
+#poster-text
+{
+  width:75%;
+  margin:auto;
+  position:relative;
+  top:25px;
+}
+
+#poster-text ul
+{
+  width:100%;
+  text-align:center;
+  list-style:none;
+  padding:0 !important;
+  margin:0 !important;
+}
+
+.poster-text-row
+{
+  color:#EF4836;
+  text-transform:uppercase;
+  font-family:Montserrat;
+  font-size:4em;
+}
+
+.poster-text-row:nth-of-type(3)
+{
+  font-size:2em;
+}
+
+#lm
+{
+  font-family:Source Sans Pro;
+  color:#EF4836;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  position:relative;
+  top:100px;
+  margin:auto;
+  width:130px;
+  text-align:center;
+  font-size:14px;
+  cursor:pointer;
+}
