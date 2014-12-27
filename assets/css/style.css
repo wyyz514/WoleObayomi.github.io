@@ -136,6 +136,8 @@ body
   letter-spacing:3px;
   color:#EF4836;
   z-index:499;
+  -webkit-transition:all 0.5s ease-in-out;
+  -webkit-transition-delay:0.75s;
 }
 
 #poster

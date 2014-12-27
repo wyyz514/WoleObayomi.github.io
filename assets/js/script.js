@@ -17,7 +17,7 @@ $(document).ready(function(){
       {
         var scrollDist = 0;
         //prevent over scrolling to pages that dont exist
-        if(this.direction === "down" && this.currentPage >= this.numOfPages)
+        if(this.direction === "down" && this.currentPage >= this.numOfPages || menuManager.menuState == "active")
         {
           return;
         }
@@ -26,46 +26,93 @@ $(document).ready(function(){
           this.currentPage += 1;
           scrollDist = this.currentPage * this.offset;
           $('body,html').animate({scrollTop:scrollDist},750);
+          menuManager.changeColor();
         }
         else
         {
           //you must be going up
-          if(this.currentPage < 1)
+          if(this.currentPage < 0) //cant scroll past first page 
             return;
           else
           {
             this.currentPage -= 1;
             scrollDist = this.currentPage * this.offset;
             $('body,html').animate({scrollTop:scrollDist},750);
+            menuManager.changeColor();
           }
         }
-        
-        console.log("You are on page ",this.currentPage);
       }
     }
     
+    var menuManager = {
+      menuState:0,
+      pageZeroColor:$("#one").find(".poster-text-row").css("color"),
+      pageOneColor:$("#two").find(".bio").css("color"),
+      pageTwoColor:"#fff",
+      changeColor:function()
+      {
+        var menuBtn = $(".menu-btn")
+        switch(scrollManager.currentPage)
+        {
+          case 0:
+            menuBtn.css("color",this.pageZeroColor);
+          break;
+          case 1:
+            menuBtn.css("color",this.pageOneColor);
+          break;
+          case 2:
+            menuBtn.css("color",this.pageTwoColor);
+          break;
+        }
+      },
+      menuToggle:function()
+      {
+        var menu = document.querySelector(".menu");
+        if(menu.classList.contains("active"))
+        {
+          menu.classList.remove("active");
+          this.menuState = "inactive";
+        }
+        else
+        {
+          menu.classList.add("active");
+          this.menuState = "active";
+        }
+      }
+    };
     return {
-      scrollManager:scrollManager
+      scrollManager:scrollManager,
+      menuManager:menuManager
     };
   })();
   
+  //scrolling
   var then = new Date();
   $(document).on("mousewheel",function(ev){
     var now = new Date();
+    //need diff to prevent erratic scrolling
     var diff = now - then;
     
-    if(diff > 1000)
+    if(diff > 1000) //1 second seems like a good time difference between scrolls
     {
       if(ev.originalEvent.wheelDeltaY > 0)
       {
         site.scrollManager.setDir("up");
-        then = now;
       }
       else
       {
         site.scrollManager.setDir("down");
-        then = now;
       }
+      then = now;
     }
+  });
+  
+  //menu toggling
+  $(".menu-btn").click(function(){
+    site.menuManager.menuToggle();
+  });
+  
+  $(".close-btn").click(function(){
+    site.menuManager.menuToggle();
   });
 });
