@@ -26,7 +26,7 @@ $(document).ready(function(){
       {
         var scrollDist = 0;
         //prevent over scrolling to pages that dont exist
-        if(this.direction === "down" && this.currentPage >= this.numOfPages || menuManager.menuState == "active")
+        if(this.direction === "down" && this.currentPage >= this.numOfPages - 1 || menuManager.menuState == "active")
         {
           return;
         }
@@ -52,7 +52,6 @@ $(document).ready(function(){
             menuManager.changeColor();
           }
         }
-        console.log(this.dirs);
       }
     }
     
@@ -109,7 +108,7 @@ $(document).ready(function(){
     //need diff to prevent erratic scrolling
     var diff = now - then;
     
-    if(diff > 1000) //1 second seems like a good time difference between scrolls
+    if(diff > 500) //half a second seems like a good time difference between scrolls
     {
       if(ev.originalEvent.wheelDeltaY > 0)
       {
