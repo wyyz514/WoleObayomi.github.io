@@ -80,6 +80,10 @@ $(document).ready(function(){
         }
       }
     };
+    
+    var animationManager = {
+      
+    };
     return {
       scrollManager:scrollManager,
       menuManager:menuManager
@@ -88,7 +92,7 @@ $(document).ready(function(){
   
   //scrolling
   var then = new Date();
-  $(document).on("mousewheel",function(ev){
+  $(document).on("mousewheel DOMMouseScroll",function(ev){
     var now = new Date();
     //need diff to prevent erratic scrolling
     var diff = now - then;
@@ -115,4 +119,6 @@ $(document).ready(function(){
   $(".close-btn").click(function(){
     site.menuManager.menuToggle();
   });
+  
+  
 });
