@@ -3,7 +3,7 @@ $(document).ready(function(){
     
     var scrollManager = {
       currentPage:0,
-      numOfPages:2,
+      numOfPages:3,
       direction:"down",
       offset:$('#two').offset().top,
       dirs:[],
@@ -15,9 +15,12 @@ $(document).ready(function(){
         else
           this.dirs.push(dir);
         
-        console.log(this.dirs);
         this.direction = this.dirs.pop();
-        this.scroll();
+        //dont invoke scroll if on the first or last page
+        if(this.currentPage == 0 && this.direction === "up" || this.currentPage == this.numOfPages - 1 && this.direction === "down")
+          return;
+        else
+          this.scroll();
       },
       scroll:function()
       {
@@ -25,7 +28,6 @@ $(document).ready(function(){
         //prevent over scrolling to pages that dont exist
         if(this.direction === "down" && this.currentPage >= this.numOfPages || menuManager.menuState == "active")
         {
-          this.dirs = [];
           return;
         }
         else if(this.direction === "down" && this.currentPage < this.numOfPages)
@@ -40,7 +42,6 @@ $(document).ready(function(){
           //you must be going up
           if(this.currentPage <= 0 && this.direction == "up") //cant scroll past first page 
           {
-            this.dirs = [];
             return;
           }
           else
@@ -51,6 +52,7 @@ $(document).ready(function(){
             menuManager.changeColor();
           }
         }
+        console.log(this.dirs);
       }
     }
     

@@ -198,11 +198,19 @@ body
   font-size:14px;
   cursor:pointer;
   -webkit-transition:all 0.2s cubic-bezier(.17,.67,0,1);
+  -moz-transition:all 0.2s cubic-bezier(.17,.67,0,1);
+  -o-transition:all 0.2s cubic-bezier(.17,.67,0,1);
+  -ms-transition:all 0.2s cubic-bezier(.17,.67,0,1);
+  transition:all 0.2s cubic-bezier(.17,.67,0,1);
 }
 
 #am:hover
 {
-  -webkit-transform:scaleX(0.85);
+  -webkit-transform:scale(0.85);
+  -moz-transform:scale(0.85);
+  -o-transform:scale(0.85);
+  -ms-transform:scale(0.85);
+  transform:scale(0.85);
 }
 
 .sect#two
