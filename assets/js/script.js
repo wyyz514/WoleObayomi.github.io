@@ -9,7 +9,13 @@ $(document).ready(function(){
       dirs:[],
       setDir:function(dir)
       {
-        this.dirs.push(dir);
+        //prevent duplicates
+        if(this.dirs.indexOf(dir) >= 0)
+          return;
+        else
+          this.dirs.push(dir);
+        
+        console.log(this.dirs);
         this.direction = this.dirs.pop();
         this.scroll();
       },
@@ -19,6 +25,7 @@ $(document).ready(function(){
         //prevent over scrolling to pages that dont exist
         if(this.direction === "down" && this.currentPage >= this.numOfPages || menuManager.menuState == "active")
         {
+          this.dirs = [];
           return;
         }
         else if(this.direction === "down" && this.currentPage < this.numOfPages)
@@ -31,8 +38,11 @@ $(document).ready(function(){
         else
         {
           //you must be going up
-          if(this.currentPage < 0) //cant scroll past first page 
+          if(this.currentPage <= 0 && this.direction == "up") //cant scroll past first page 
+          {
+            this.dirs = [];
             return;
+          }
           else
           {
             this.currentPage -= 1;
