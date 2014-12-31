@@ -9,6 +9,10 @@ $(document).ready(function(){
       dirs:[],
       setDir:function(dir)
       {
+        if(arguments[1])
+        {
+          this.currentPage = arguments[1];
+        }
         //prevent duplicates
         if(this.dirs.indexOf(dir) >= 0)
           return;
@@ -25,8 +29,18 @@ $(document).ready(function(){
       scroll:function()
       {
         var scrollDist = 0;
-        //prevent over scrolling to pages that dont exist
-        if(this.direction === "down" && this.currentPage >= this.numOfPages - 1 || menuManager.menuState == "active")
+        console.log(arguments[0]);
+        if(arguments[0] && arguments[0] < this.numOfPages)
+        {
+          console.log("conditions passed");
+          this.currentPage = arguments[0];
+          scrollDist = this.currentPage * this.offset;
+          $("body,html").animate({scrollTop:scrollDist},750);
+          animationManager.triggerAnimation();
+          return;
+        }
+        //prevent over scrolling to pages that dont exist 
+        if(this.direction === "down" && this.currentPage >= this.numOfPages - 1)
         {
           return;
         }
@@ -56,7 +70,7 @@ $(document).ready(function(){
     }
     
     var menuManager = {
-      menuState:0,
+      menuState:"inactive",
       pageZeroColor:$(".sect#p0").find(".poster-text-row").css("color"),
       pageOneColor:$(".sect#p1").find(".bio").css("color"),
       pageTwoColor:"#fff",
@@ -97,7 +111,6 @@ $(document).ready(function(){
       triggerAnimation:function()
       {
         var currentPage = parseInt(scrollManager.currentPage);
-        console.log("Current Page",currentPage);
         $(".sect").eq(currentPage).find(".inactive").removeClass("inactive").addClass("active");
       }
     };
@@ -138,5 +151,13 @@ $(document).ready(function(){
     site.menuManager.menuToggle();
   });
   
+  //scroll to about me page
+  $("#am").on("click",function(){
+    site.scrollManager.scroll(1);
+  });
   
+  $("#amlink").click(function(){
+    $("#am").trigger("click");
+    $(".close-btn").trigger("click");
+  });
 });

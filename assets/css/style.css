@@ -50,6 +50,10 @@ body
   position:fixed;
   background-color:#EF4836;
   z-index:999;
+  -webkit-transform-origin:left top;
+  -moz-transform-origin:left top;
+  -o-transform-origin:left top;
+  -ms-transform-origin:left top;
   transform-origin:left top;
   -webkit-transform:rotate(-90deg);
   -moz-transform:rotate(-90deg);
@@ -108,13 +112,13 @@ body
   color:#333;
   margin-bottom:20px;
   font-size:2em;
+  cursor:pointer;
 }
 
 #options-list
 {
   padding:0 !important;
   margin:0 !important;
-  width:100%;
   text-align:center;
   list-style:none;
 }
