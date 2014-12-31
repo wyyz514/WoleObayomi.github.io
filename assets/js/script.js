@@ -5,7 +5,7 @@ $(document).ready(function(){
       currentPage:0,
       numOfPages:3,
       direction:"down",
-      offset:$('#two').offset().top,
+      offset:$('.sect#p1').offset().top,
       dirs:[],
       setDir:function(dir)
       {
@@ -57,8 +57,8 @@ $(document).ready(function(){
     
     var menuManager = {
       menuState:0,
-      pageZeroColor:$("#one").find(".poster-text-row").css("color"),
-      pageOneColor:$("#two").find(".bio").css("color"),
+      pageZeroColor:$(".sect#p0").find(".poster-text-row").css("color"),
+      pageOneColor:$(".sect#p1").find(".bio").css("color"),
       pageTwoColor:"#fff",
       changeColor:function()
       {
@@ -75,6 +75,7 @@ $(document).ready(function(){
             menuBtn.css("color",this.pageTwoColor);
           break;
         }
+        animationManager.triggerAnimation();
       },
       menuToggle:function()
       {
@@ -93,11 +94,17 @@ $(document).ready(function(){
     };
     
     var animationManager = {
-      
+      triggerAnimation:function()
+      {
+        var currentPage = parseInt(scrollManager.currentPage);
+        console.log("Current Page",currentPage);
+        $(".sect").eq(currentPage).find(".inactive").removeClass("inactive").addClass("active");
+      }
     };
     return {
       scrollManager:scrollManager,
-      menuManager:menuManager
+      menuManager:menuManager,
+      animationManager:animationManager
     };
   })();
   
