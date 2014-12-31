@@ -33,7 +33,7 @@ body
   width:100%;
 }
 
-.sect#one
+.sect#p0
 {
   top:0;
   background-image:url("/assets/img/mazbg.png");
@@ -213,7 +213,7 @@ body
   transform:scale(0.85);
 }
 
-.sect#two
+.sect#p1
 {
   top:100%;
   background-color:#F7CA18;
@@ -238,10 +238,14 @@ body
   font-size:3em;
   font-weight:bold;
   color:#2C3E50;
-  -webkit-transition:all 0.5s ease-in-out;
-/*  opacity:0;*/
+  -webkit-transition:all 0.8s ease-in-out 0.5s;
+  -moz-transition:all 0.8s ease-in-out 0.5s;
+  -o-transition:all 0.8s ease-in-out 0.5s;
+  -ms-transition:all 0.8s ease-in-out 0.5s;
+  transition:all 0.8s ease-in-out 0.5s;
+  opacity:0;
   position:relative;
-  top:5px;
+  top:15px;
 }
 
 .bio.active
@@ -256,17 +260,17 @@ body
   text-align:center;
   font-size:1.5em;
   color:red;
-/*  opacity:0;*/
+  opacity:0;
   -webkit-transform:scale(0.85);
   -moz-transform:scale(0.85);
   -ms-transform:scale(0.85);
   -o-transform:scale(0.85);
   transform:scale(0.85);
-  -webkit-transition:all 0.5s cubic-bezier(.17,.67,0,1);
-  -moz-transition:all 0.5s cubic-bezier(.17,.67,0,1);
-  -ms-transition:all 0.5s cubic-bezier(.17,.67,0,1);
-  -o-transition:all 0.5s cubic-bezier(.17,.67,0,1);
-  transition:all 0.5s cubic-bezier(.17,.67,0,1);
+  -webkit-transition:all 0.5s cubic-bezier(.17,.67,0,1) 1s;
+  -moz-transition:all 0.5s cubic-bezier(.17,.67,0,1) 1s;
+  -ms-transition:all 0.5s cubic-bezier(.17,.67,0,1) 1s;
+  -o-transition:all 0.5s cubic-bezier(.17,.67,0,1) 1s;
+  transition:all 0.5s cubic-bezier(.17,.67,0,1) 1s;
 }
 
 #sch.active
@@ -279,7 +283,7 @@ body
   transform:scale(1);
 }
 
-#three
+.sect#p2
 {
   top:200%;
   background-color:#2C3E50;
