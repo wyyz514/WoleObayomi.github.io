@@ -40,7 +40,7 @@ $(document).ready(function(){
           return;
         }
         //prevent over scrolling to pages that dont exist 
-        if(this.direction === "down" && this.currentPage >= this.numOfPages - 1)
+        if(this.direction === "down" && this.currentPage >= this.numOfPages - 1 || menuManager.menuState === "active")
         {
           return;
         }
