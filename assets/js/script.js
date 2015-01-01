@@ -160,4 +160,4 @@ $(document).ready(function(){
     $("#am").trigger("click");
     $(".close-btn").trigger("click");
   });
-});
+})
