@@ -5,6 +5,10 @@ blog.config(["$routeProvider",function($routeProvider){
     controller:"IndexController",
     templateUrl:"/blog/app/partials/index.html"
   })
+  .when("/new",{
+    controller:"NewPostController",
+    templateUrl:"/blog/app/partials/edit.html"
+  })
   .when("/posts",{
     controller:"PostsController",
     templateUrl:"/blog/app/partials/posts.html"
