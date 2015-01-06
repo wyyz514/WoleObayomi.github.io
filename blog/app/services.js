@@ -2,6 +2,7 @@ blog.service("FirebaseService",["$firebase",function($firebase){
   var link = "https://shining-torch-6695.firebaseio.com/blog/posts";
   var firebase = {
     posts:[],
+    selectedPostKey:"",
     establishConnection:function()
     {
       var ref = new Firebase(link);
@@ -21,13 +22,13 @@ blog.service("FirebaseService",["$firebase",function($firebase){
     {
       this.posts.$add(post);
     },
-    deletePost:function(id)
+    deletePost:function(post)
     {
-      this.posts.$remove(id);
+      this.posts.$remove(post);
     },
-    updatePost:function(id)
+    updatePost:function(post)
     {
-      this.posts.$save(id);
+      this.posts.$save(post);
     },
     generateID:function()
     {
