@@ -24,6 +24,14 @@ blog.service("FirebaseService",["$firebase",function($firebase){
     deletePost:function(id)
     {
       this.posts.$remove(id);
+    },
+    updatePost:function(id)
+    {
+      this.posts.$save(id);
+    },
+    generateID:function()
+    {
+      return this.posts.length + 1;
     }
   };
   return firebase;
