@@ -1,4 +1,21 @@
-<div>
-  <h1><a href="#/new">Create Post</a></h1>
-  <h1><a href="#/posts">View Posts</a></h1>
+<div id="home-bg">
+  <div id="intro">
+    <span id="intro-text">Welcome To Wole's Blog.</span>
+  </div>
+  <div id="latest-post">
+    <div id="latest-post-text">
+      <p>Latest Post</p>
+      <div ng-if="!post"><i class="fa fa-gear fa-spin" style="color:#f0f0f0;"></i></div>
+      <div id="latest-post-title"><a href="#/posts/{{post.id}}">{{post.title}}</a></div>
+    </div>
+  </div>
+  <div id="more-posts" ng-click="scrollToPosts()"><span>More Posts</span></div>
 </div>
+<div id="otherposts" >
+  <div id="cards-wrapper">
+    <div ng-repeat='post in posts'>
+      <div cards></div>
+    </div>
+  </div>
+</div>
+
