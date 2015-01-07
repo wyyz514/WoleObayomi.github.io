@@ -1,5 +1,19 @@
 blog.controller("IndexController",["$scope","FirebaseService",function($scope,FirebaseService){
+  $scope.posts = [];
   FirebaseService.establishConnection();
+  FirebaseService.getPosts().$loaded(function(posts){
+    $scope.posts = Array.prototype.slice.call(posts);
+    $scope.post = $scope.posts[$scope.posts.length - 1];
+  },
+  function(error){
+    console.log(error);
+  });
+  
+  $scope.scrollToPosts = function()
+  {
+    var offset = $("#otherposts").offset().top;
+    $("html,body").animate({scrollTop:offset},500);
+  }
 }]);
 
 blog.controller("NewPostController",["$scope","$location","FirebaseService",function($scope,$location,FirebaseService){
