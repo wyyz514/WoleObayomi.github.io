@@ -2,7 +2,7 @@ blog.controller("IndexController",["$scope","FirebaseService",function($scope,Fi
   FirebaseService.establishConnection();
 }]);
 
-blog.controller("NewPostController",["$scope","FirebaseService",function($scope,FirebaseService){
+blog.controller("NewPostController",["$scope","$location","FirebaseService",function($scope,$location,FirebaseService){
   $scope.post = {};
   $scope.post.title = "";
   $scope.post.body = "";
@@ -17,15 +17,17 @@ blog.controller("NewPostController",["$scope","FirebaseService",function($scope,
     newPost.createdBy = "Wole";
     newPost.createdAt = new Date().toString();
     FirebaseService.addPost(newPost);
+    $location.path("/");
   }
 }]);
 
-blog.controller("EditController",["$scope","FirebaseService",function($scope,FirebaseService){
+blog.controller("EditController",["$scope","$location","FirebaseService",function($scope,$location,FirebaseService){
   $scope.post = FirebaseService.getPost(FirebaseService.selectedPostKey);
   
   $scope.savePost = function()
   {
     FirebaseService.updatePost($scope.post);
+    $location.path("/");
   }
 }]);
 
@@ -44,6 +46,20 @@ blog.controller("PostsController",["$scope","FirebaseService",function($scope,Fi
   
 }]);
 
-blog.controller("PostController",["$scope","FirebaseService","$location",function($scope,FirebaseService,$routeParams){
-  $scope.post = FirebaseService.getPost(FirebaseService.selectedPostKey);
+blog.controller("PostController",["$scope","$location","$routeParams","FirebaseService",function($scope,$location,$routeParams,FirebaseService){
+  if(FirebaseService.getPost(FirebaseService.selectedPostKey))
+  {
+    $scope.post = FirebaseService.getPost(FirebaseService.selectedPostKey);
+  }
+  else
+  {
+    $scope.posts = FirebaseService.getPosts();
+    $scope.posts.sort(function(a,b){
+      return a.id - b.id;
+    });
+    var id = parseInt($routeParams.id);
+    var targetPost = $scope.posts[id - 1];
+    FirebaseService.selectedPostKey = targetPost.$id;
+    $scope.post = FirebaseService.getPost(FirebaseService.selectedPostKey);
+  }
 }]);
