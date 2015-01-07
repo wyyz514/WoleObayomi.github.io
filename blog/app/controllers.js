@@ -34,11 +34,6 @@ blog.controller("EditController",["$scope","$location","FirebaseService",functio
 blog.controller("PostsController",["$scope","FirebaseService",function($scope,FirebaseService){
   $scope.posts = FirebaseService.getPosts();
   
-  $scope.getPostKey = function(key)
-  {
-    FirebaseService.selectedPostKey = key;
-  }
-  
   $scope.deletePost = function(post)
   {
     FirebaseService.deletePost(post);
@@ -47,19 +42,19 @@ blog.controller("PostsController",["$scope","FirebaseService",function($scope,Fi
 }]);
 
 blog.controller("PostController",["$scope","$location","$routeParams","FirebaseService",function($scope,$location,$routeParams,FirebaseService){
-  if(FirebaseService.getPost(FirebaseService.selectedPostKey))
-  {
-    $scope.post = FirebaseService.getPost(FirebaseService.selectedPostKey);
-  }
-  else
-  {
     $scope.posts = FirebaseService.getPosts();
     $scope.posts.sort(function(a,b){
       return a.id - b.id;
     });
     var id = parseInt($routeParams.id);
-    var targetPost = $scope.posts[id - 1];
-    FirebaseService.selectedPostKey = targetPost.$id;
-    $scope.post = FirebaseService.getPost(FirebaseService.selectedPostKey);
-  }
+    if(id > $scope.posts.length || id == 0)
+    {
+      $location.path("/");
+    }
+    else
+    {
+      var targetPost = $scope.posts[id - 1];
+      FirebaseService.selectedPostKey = targetPost.$id;
+      $scope.post = FirebaseService.getPost(FirebaseService.selectedPostKey);
+    }
 }]);
