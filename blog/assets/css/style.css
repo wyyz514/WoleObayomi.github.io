@@ -82,18 +82,20 @@ body
   position:relative;
   text-align:center;
   top:38%;
-}
-
-#more-posts span
-{
+  height:27px;
+  width:100px;
+  border:1px solid wheat;
+  border-radius:3px;
+  line-height:27px;
+  margin:auto;
   color:wheat;
   font-family:Roboto;
-  font-size:10px;
-  text-transform:uppercase;
   letter-spacing:2px;
   cursor:pointer;
-  text-decoration:underline;
+  font-size:10px;
+  text-transform:uppercase;
 }
+
 
 #otherposts
 {
@@ -106,10 +108,10 @@ body
 #cards-wrapper
 {
   position:relative;
-  height:300px;
-  width:500px;
+  height:500px;
+  width:400px;
   margin:auto;
-  top:25%;
+  top:13%;
 }
 
 .card
@@ -124,11 +126,11 @@ body
 
 .card-inner
 {
-  height:50%;
-  width:90%;
+  top:5%;
+  height:90%;
+  width:85%;
   margin:auto;
   position:relative;
-  top:40%;
   text-align:center;
 }
 
@@ -137,5 +139,13 @@ body
   font-family:"Crete Round";
   color:#333;
   font-weight:bold;
-  font-size:2.5em;
+  font-size:2em;
+}
+
+.line
+{
+  background-color:#f0f0f0;
+  height:3px;
+  width:100%;
+  margin-bottom:3px;
 }
