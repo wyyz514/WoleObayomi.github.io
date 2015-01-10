@@ -17,10 +17,22 @@ blog.controller("IndexController",["$scope","FirebaseService",function($scope,Fi
   
   {
     $("#left-arrow").click(function(){
+      if(!$(".card-holder").eq(0).hasClass("last"))
+      {
+         $(".card-holder").eq(0).addClass("last");
+      }
+      
       if($(".card-holder.top").length == 0)
       {
         $(".card-holder").parent().children().last().prev().addClass("top");
         $(".card-holder").parent().children().last().addClass("leftHidden");
+      }
+      else if($(".card-holder").eq(0).hasClass("top") && $(".card-holder").eq(0).hasClass("last"))
+      {
+        if($(".card-holder").eq(0).next().hasClass("leftHidden"))
+          return;
+        else
+          $(".card-holder").eq(0).removeClass("top").next().addClass("top").removeClass("rightHidden");
       }
       else if($(".card-holder.top").next().hasClass("rightHidden"))
       {
@@ -37,10 +49,21 @@ blog.controller("IndexController",["$scope","FirebaseService",function($scope,Fi
     });
     
     $("#right-arrow").click(function(){
+      if(!$(".card-holder").eq(0).hasClass("last"))
+      {
+         $(".card-holder").eq(0).addClass("last");
+      }
       if($(".card-holder.top").length == 0)
       {
         $(".card-holder").parent().children().last().prev().addClass("top");
         $(".card-holder").parent().children().last().addClass("rightHidden");
+      }
+      else if($(".card-holder").eq(0).hasClass("top") && $(".card-holder").eq(0).hasClass("last"))
+      {
+        if($(".card-holder").eq(0).next().hasClass("rightHidden"))
+          return;
+        else
+          $(".card-holder").eq(0).removeClass("top").next().addClass("top").removeClass("leftHidden");
       }
       else if($(".card-holder.top").next().hasClass("leftHidden"))
       {
