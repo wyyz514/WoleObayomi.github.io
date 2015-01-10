@@ -183,16 +183,32 @@ body
   width:100%;
   -webkit-transform:translateX(0);
   -webkit-transition:all 0.5s cubic-bezier(0.2,0,0.5,0.5);
+  -moz-transform:translateX(0);
+  -moz-transition:all 0.5s cubic-bezier(0.2,0,0.5,0.5);
+  -ms-transform:translateX(0);
+  -ms-transition:all 0.5s cubic-bezier(0.2,0,0.5,0.5);
+  -o-transform:translateX(0);
+  -o-transition:all 0.5s cubic-bezier(0.2,0,0.5,0.5);
+  transform:translateX(0);
+  transition:all 0.5s cubic-bezier(0.2,0,0.5,0.5);
 }
 
 .leftHidden
 {
   -webkit-transform:translateX(-100px);
+  -moz-transform:translateX(-100px);
+  -o-transform:translateX(-100px);
+  -ms-transform:translateX(-100px);
+  transform:translateX(-100px);
   opacity:0;
 }
 
 .rightHidden
 {
   -webkit-transform:translateX(100px);
+  -moz-transform:translateX(100px);
+  -o-transform:translateX(100px);
+  -ms-transform:translateX(100px);
+  transform:translateX(100px);
   opacity:0;
 }
