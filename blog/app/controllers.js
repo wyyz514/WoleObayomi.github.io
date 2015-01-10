@@ -14,6 +14,48 @@ blog.controller("IndexController",["$scope","FirebaseService",function($scope,Fi
     var offset = $("#otherposts").offset().top;
     $("html,body").animate({scrollTop:offset},500);
   }
+  
+  {
+    $("#left-arrow").click(function(){
+      if($(".card-holder.top").length == 0)
+      {
+        $(".card-holder").parent().children().last().prev().addClass("top");
+        $(".card-holder").parent().children().last().addClass("leftHidden");
+      }
+      else if($(".card-holder.top").next().hasClass("rightHidden"))
+      {
+        var current = $(".card-holder.top");
+        current.removeClass("top");
+        current.next().removeClass("rightHidden").addClass("top");
+      }
+      else
+      {
+        var current = $(".card-holder.top");
+        current.removeClass("top").addClass("leftHidden");
+        current.prev().addClass("top");
+      }
+    });
+    
+    $("#right-arrow").click(function(){
+      if($(".card-holder.top").length == 0)
+      {
+        $(".card-holder").parent().children().last().prev().addClass("top");
+        $(".card-holder").parent().children().last().addClass("rightHidden");
+      }
+      else if($(".card-holder.top").next().hasClass("leftHidden"))
+      {
+        var current = $(".card-holder.top");
+        current.removeClass("top");
+        current.next().removeClass("leftHidden").addClass("top");
+      }
+      else
+      {
+        var current = $(".card-holder.top");
+        current.removeClass("top").addClass("rightHidden");
+        current.prev().addClass("top");
+      }
+    });
+  }
 }]);
 
 blog.controller("NewPostController",["$scope","$location","FirebaseService",function($scope,$location,FirebaseService){
