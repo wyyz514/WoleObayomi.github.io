@@ -2,7 +2,6 @@
 body
 {
   margin:0 !important;
-  overflow:hidden;
 }
 
 #home-bg
@@ -148,4 +147,52 @@ body
   height:3px;
   width:100%;
   margin-bottom:3px;
+}
+
+.arrow
+{
+  position:absolute;
+  height:200px;
+  width:200px;
+  text-align:center;
+  line-height:200px;
+  z-index:101;
+  top:40%;
+  cursor:pointer;
+}
+
+.arrow i
+{
+  color:#cecece;
+}
+
+#left-arrow
+{
+  left:230px;
+}
+
+#right-arrow
+{
+  right:230px;
+}
+
+.card-holder
+{
+  position:absolute;
+  height:100%;
+  width:100%;
+  -webkit-transform:translateX(0);
+  -webkit-transition:all 0.5s cubic-bezier(0.2,0,0.5,0.5);
+}
+
+.leftHidden
+{
+  -webkit-transform:translateX(-100px);
+  opacity:0;
+}
+
+.rightHidden
+{
+  -webkit-transform:translateX(100px);
+  opacity:0;
 }
