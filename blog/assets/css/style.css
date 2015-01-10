@@ -176,6 +176,32 @@ body
   right:230px;
 }
 
+#left-arrow:active
+{
+  -webkit-animation:moveLeft 0.5s 1;
+}
+
+#right-arrow:active
+{
+  -webkit-animation:moveRight 0.5s 1;
+}
+
+@-webkit-keyframes moveLeft
+{
+  to
+  {
+    left:210px;
+  }
+}
+
+@-webkit-keyframes moveRight
+{
+  to
+  {
+    right:210px;
+  }
+}
+
 .card-holder
 {
   position:absolute;
