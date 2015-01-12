@@ -20,10 +20,10 @@ body
 #intro
 {
   position:relative;
-  top:35%;
+  height:40%;
+  width:100%;
   text-align:center;
-  height:20%;
-  width:auto;
+  line-height:300px;
 }
 
 #intro #intro-text
@@ -37,8 +37,8 @@ body
 #latest-post
 {
   position:relative;
-  top:30%;
-  height:25%;
+  height:50%;
+  width:100%;
 }
 
 #latest-post-text
@@ -80,7 +80,6 @@ body
 {
   position:relative;
   text-align:center;
-  top:38%;
   height:27px;
   width:100px;
   border:1px solid wheat;
@@ -223,7 +222,7 @@ body
 }
 
 
-@media (min-width:360px) and (max-width:768px)
+@media (max-width:360px)
 {
   #intro #intro-text,#latest-post-title
   {
@@ -257,21 +256,22 @@ body
   }
 }
 
-@media (max-width:1024px)
+@media (min-width:768px)
 {
   #cards-wrapper
   {
-    width:45%;
-    height:75%;
+    width:400px;
+    height:600px;
   }
   
   #left-arrow
   {
-    left:20%;
+    left:5%;
   }
   
   #right-arrow
   {
-    right:20%;
+    right:5%;
   }
 }
+
