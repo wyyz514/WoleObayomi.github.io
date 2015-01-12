@@ -249,4 +249,9 @@ body
   {
     right:0;
   }
+  
+  .card-inner span
+  {
+    font-size:1em;
+  }
 }
