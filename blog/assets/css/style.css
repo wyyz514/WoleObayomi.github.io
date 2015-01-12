@@ -184,22 +184,6 @@ body
   -webkit-animation:moveRight 0.5s 1;
 }
 
-@-webkit-keyframes moveLeft
-{
-  to
-  {
-    left:24%;
-  }
-}
-
-@-webkit-keyframes moveRight
-{
-  to
-  {
-    right:24%;
-  }
-}
-
 .card-holder
 {
   position:absolute;
