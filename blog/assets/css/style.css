@@ -256,3 +256,22 @@ body
     font-size:1em;
   }
 }
+
+@media (max-width:1024px)
+{
+  #cards-wrapper
+  {
+    width:45%;
+    height:75%;
+  }
+  
+  #left-arrow
+  {
+    left:20%;
+  }
+  
+  #right-arrow
+  {
+    right:20%;
+  }
+}
