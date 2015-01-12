@@ -131,6 +131,7 @@ body
   margin:auto;
   position:relative;
   text-align:center;
+  overflow:hidden;
 }
 
 .card-inner span
@@ -222,7 +223,7 @@ body
 }
 
 
-@media (max-width:360px)
+@media (min-width:360px) and (max-width:768px)
 {
   #intro #intro-text,#latest-post-title
   {
@@ -231,7 +232,7 @@ body
   
   #cards-wrapper
   {
-    width:80%;
+    width:75%;
     height:68%;
   }
   
