@@ -153,10 +153,10 @@ body
 {
   position:absolute;
   text-align:center;
-  line-height:200px;
   z-index:101;
-  top:40%;
+  top:50%;
   cursor:pointer;
+  padding:10px;
 }
 
 .arrow i
@@ -166,12 +166,12 @@ body
 
 #left-arrow
 {
-  left:5%;
+  left:25%;
 }
 
 #right-arrow
 {
-  right:5%;
+  right:25%;
 }
 
 #left-arrow:active
@@ -188,7 +188,7 @@ body
 {
   to
   {
-    left:0%;
+    left:24%;
   }
 }
 
@@ -196,7 +196,7 @@ body
 {
   to
   {
-    right:0%;
+    right:24%;
   }
 }
 
@@ -238,7 +238,7 @@ body
 }
 
 
-@media (max-width:768px)
+@media (max-width:360px)
 {
   #intro #intro-text,#latest-post-title
   {
@@ -247,7 +247,7 @@ body
   
   #cards-wrapper
   {
-    width:85%;
+    width:80%;
     height:68%;
   }
   
@@ -258,7 +258,7 @@ body
   
   #left-arrow
   {
-    left:0 !important;
+    left:0;
   }
   
   #right-arrow
