@@ -120,19 +120,22 @@ blog.controller("PostsController",["$scope","FirebaseService",function($scope,Fi
 }]);
 
 blog.controller("PostController",["$scope","$location","$routeParams","FirebaseService",function($scope,$location,$routeParams,FirebaseService){
-    $scope.posts = FirebaseService.getPosts();
-    $scope.posts.sort(function(a,b){
-      return a.id - b.id;
-    });
-    var id = parseInt($routeParams.id);
-    if(id > $scope.posts.length || id == 0)
-    {
-      $location.path("/");
-    }
-    else
-    {
-      var targetPost = $scope.posts[id - 1];
-      FirebaseService.selectedPostKey = targetPost.$id;
-      $scope.post = FirebaseService.getPost(FirebaseService.selectedPostKey);
-    }
+  $scope.posts = FirebaseService.getPosts();
+  $scope.posts.sort(function(a,b){
+    return a.id - b.id;
+  });
+  var id = parseInt($routeParams.id);
+  if(id > $scope.posts.length || id == 0)
+  {
+    $location.path("/");
+  }
+  else
+  {
+    var targetPost = $scope.posts[id - 1];
+    FirebaseService.selectedPostKey = targetPost.$id;
+    $scope.post = FirebaseService.getPost(FirebaseService.selectedPostKey);
+  }
+  
+  var SideComments = require("side-comments");
+  var sideComments = new SideComments("#commentable-area","","");
 }]);
