@@ -1,4 +1,4 @@
-@import url("http://fonts.googleapis.com/css?family=Crete+Round|Roboto:500");
+@import url("http://fonts.googleapis.com/css?family=Crete+Round|Roboto:500|Lato:900");
 body
 {
   margin:0 !important;
@@ -11,33 +11,30 @@ body
   left:0;
   height:100%;
   width:100%;
-  background-image:url("../img/home-bg.jpg");
-  background-size:cover;
-  background-position:center center;
-  background-repeat:no-repeat;
+  background-color:#2C3E50;
 }
 
 #intro
 {
   position:relative;
-  height:40%;
+  height:55%;
   width:100%;
   text-align:center;
-  line-height:300px;
 }
 
 #intro #intro-text
 {
-  font-family:"Crete Round";
-  font-size:3em;
-  font-weight:bold;
-  color:#fff;
+  font-family:"Lato";
+  font-size:2em;
+  color:wheat;
+  position:relative;
+  top:60%;
 }
 
 #latest-post
 {
   position:relative;
-  height:50%;
+  height:30%;
   width:100%;
 }
 
@@ -63,9 +60,9 @@ body
   text-align:center;
   height:80%;
   width:auto;
-  font-family:"Crete Round";
+  font-family:"Lato";
   color:#f0f0f0;
-  font-size:3em;
+  font-size:1.5em;
   transition:all 0.3s ease-in-out;
 }
 
@@ -106,7 +103,7 @@ body
 #cards-wrapper
 {
   position:relative;
-  height:85%;
+  height:80%;
   width:30%;
   margin:auto;
   top:13%;
@@ -115,8 +112,8 @@ body
 .card
 {
   position:absolute;
-  height:100%;
-  width:100%;
+  height:90%;
+  width:90%;
   background-color:#fff;
   box-shadow:0 0 5px 3px #cecece;
   -webkit-transition:all 0.5s ease-in-out;
