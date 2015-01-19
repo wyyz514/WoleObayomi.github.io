@@ -1,3 +1,7 @@
-<h1>{{post.title}} by {{post.createdBy}}</h1>
-<span data-livestamp="{{post.createdAt}}"></span>
-<p>{{post.body}}</p>
+<div class="blog-title"><h1>{{post.title}}</h1><span>Posted <span data-livestamp="{{post.createdAt}}"></span> by {{post.createdBy}}</span></div>
+<br>
+<div class="rule"></div>
+<br>
+<div class="blog-body">
+  <p>{{post.body}}</p>
+</div>

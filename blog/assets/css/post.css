@@ -1,0 +1,35 @@
+.blog-title
+{
+  width:65%;
+  height:auto;
+  text-align:center;
+  margin:auto;
+}
+
+.blog-title h1
+{
+  font-family:"Lato";
+}
+
+.blog-title span
+{
+  color:#cecece;
+  font-family:"Lato";
+  font-weight:100;
+}
+
+.blog-body
+{
+  width:55%;
+  height:auto;
+  margin:auto;
+  font-family:Lato;
+}
+
+.rule
+{
+  width:55%;
+  height:1px;
+  background-color:#f0f0f0;
+  margin:auto;
+}
