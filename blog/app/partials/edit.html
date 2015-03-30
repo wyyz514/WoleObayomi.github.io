@@ -1,4 +1,16 @@
-<h1 style="text-align:center;">Edit Post</h1>
-<input type="text" ng-model="post.title" required><br>
-<textarea ng-model="post.body" required></textarea><br>
-<button ng-click="savePost()">Save</button>
+<div class="page-title"><h1 style="text-align:center;">Edit Post</h1></div>
+<div class="edit-container">
+  <div class="input-wrap">
+    <label><b>Edit Title</b></label>
+    <br><br>
+    <input type="text" ng-model="post.title" required>
+  </div>
+  <br>
+  <div class="input-wrap">
+    <label><b>Edit Body</b></label>
+    <br><br>
+    <textarea ng-model="post.body" required></textarea>
+  </div
+  <br><br>
+  <div class="button" ng-click="savePost()">Save</div>
+</div>

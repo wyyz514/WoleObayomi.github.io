@@ -1,0 +1,62 @@
+.input-wrap
+{
+  height:auto;
+  width:55%;
+  text-align:center;
+  margin:auto;
+  font-family:"Lato";
+}
+
+input[type="text"]
+{
+  border:1px solid wheat;
+  padding:3px;
+  padding-left:5px;
+  height:25px;
+  width:45%;
+  border-radius:3px;
+  font-family:"Lato";
+  font-size:13px;
+}
+
+input:focus
+{
+  outline:none;
+}
+
+textarea
+{
+  width:90%;
+  padding:10px;
+  height:350px;
+  font-family:"Lato";
+  border:1px solid wheat;
+  border-radius:3px;
+  resize:none;
+}
+
+textarea:focus
+{
+  outline:none;
+}
+
+.button
+{
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  -ms-appearance:none;
+  appearance:none;
+  height:25px;
+  width:100px;
+  border:1px solid #000;
+  font-family:"Roboto";
+  font-size:13px;
+  line-height:26px;
+  background-color:#000;
+  margin:auto;
+  text-align:center;
+  color:wheat;
+  text-transform:uppercase;
+  border-radius:2px;
+  cursor:pointer;
+}

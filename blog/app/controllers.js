@@ -135,7 +135,9 @@ blog.controller("PostController",["$scope","$location","$routeParams","FirebaseS
     FirebaseService.selectedPostKey = targetPost.$id;
     $scope.post = FirebaseService.getPost(FirebaseService.selectedPostKey);
   }
-  
   var SideComments = require("side-comments");
   var sideComments = new SideComments("#commentable-area","","");
+  sideComments.on("addCommentAttempted",function(){
+    console.log("Create a user");
+  });
 }]);

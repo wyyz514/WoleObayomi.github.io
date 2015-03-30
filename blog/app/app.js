@@ -21,4 +21,5 @@ blog.config(["$routeProvider",function($routeProvider){
     controller:"EditController",
     templateUrl:"/blog/app/partials/edit.html"
   })
+  .otherwise({redirectTo:"/"});
 }]);

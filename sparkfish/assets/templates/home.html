@@ -1,0 +1,71 @@
+<div id="navbar">
+    <div id="logo">
+        <div id="logo-text">Sparkfish</div>
+    </div>
+     <div id="filler"></div>
+    <div id="people">People</div>
+    <div id="projects">Projects</div>
+    <div id="pic-name">
+        <div id="name">Wole Obayomi</div>
+    </div>
+    <div id="menu">
+        <i class="ion-ios-arrow-down"></i>
+    </div>
+</div>
+<div id="particles">
+    <div id="top-sparks-link">
+        View Top Sparks<br>
+    </div>
+</div>
+<div id="particles-overlay">
+</div>
+<div id="splash">
+    <div id="welcome-name">Welcome to Sparkfish, Wole Obayomi</div>
+    <br>
+    <div id="button-container">
+        <div class="button">Create Project</div>
+        <div class="button">Join Project</div>
+    </div>
+</div>
+<div id="content">
+    <h2 id="top-sparks">Top Sparks</h2>
+    <div id="projects-container" ng-repeat="i in [0,1,2,3,4,5,6,7,8,9]">
+        <div class="project">
+            <div class="project-image"></div>
+            <div class="project-desc">
+                <p>{{project.desc}}</p>
+                <div id="blur"></div>
+            </div>
+            <div class="project-needs">
+                <div id="need">{{project.need}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+  initParticles();
+    var triggeredContent = false;
+    $(window).scroll(function(){
+        if($(window).scrollTop() > 0)
+        {
+            $("#navbar").addClass("scrolled");
+            $("#projects,#people,#name").css("color","#2C3E50");
+            $("#logo-text").css({"color":"#2C3E50","border":"2px solid #2C3E50"});
+            if(!triggeredContent)
+            {
+                $("#top-sparks-link").trigger("click");
+                triggeredContent = true;
+            }
+        }
+        else
+        {
+            $("#navbar").removeClass("scrolled");
+            $("#projects,#people,#name").css("color","#fff");
+            $("#logo-text").css({"color":"yellow","border":"2px solid yellow"});
+        }
+    });
+    $("#top-sparks-link").click(function(){
+        $("body,html").animate({scrollTop:(0.73 * $(window).height())},800);
+        $("#content").addClass("content-viewed");
+    });
+</script>
