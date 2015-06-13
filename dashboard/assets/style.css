@@ -359,7 +359,7 @@ ul li
 
 .comment-head
 {
-    background-image:url("/assets/img/donald_draper.png");
+    background-image:url("img/donald_draper.png");
     height:3em;
     width:3em;
     border-radius:100%;
