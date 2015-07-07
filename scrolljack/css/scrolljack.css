@@ -1,0 +1,115 @@
+body
+{
+    height:100vh;
+    width:100vw;
+    margin:0;
+}
+
+.page
+{
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    -webkit-transition:-webkit-transform 0.5s cubic-bezier(.68,.07,.82,.46);
+    -ms-transition:-ms-transform 0.5s cubic-bezier(.68,.07,.82,.46);
+    -moz-transition:-moz-transform 0.5s cubic-bezier(.68,.07,.82,.46);
+    -o-transition:-o-transform 0.5s cubic-bezier(.68,.07,.82,.46);
+    transition:transform 0.5s cubic-bezier(.68,.07,.82,.46);
+}
+
+.page-content
+{
+    position:relative;
+    margin:auto;
+    height:80%;
+    top:10%;
+    width:75%;
+}
+
+.center-text
+{
+    position:relative;
+    top:50%;
+    text-align:center;
+    font-family:"Bitter";
+    font-size:1.5em;
+    color:#fff;
+}
+
+.page[data-sj-page="1"]
+{
+    background-color:#286aab;
+}
+
+.page[data-sj-page="2"]
+{
+    background-color:#2cc185;
+}
+
+.page[data-sj-page="3"]
+{
+    background-color:#F53064;
+}
+
+.page[data-sj-page="4"]
+{
+    background-color:#2C3E50;
+}
+
+.scrolled
+{
+    -webkit-transform:translateY(-100%);
+    -ms-transform:translateY(-100%);
+    -moz-transform:translateY(-100%);
+    -o-transform:translateY(-100%);
+    transform:translateY(-100%);
+}
+
+.unscrolled
+{
+    -webkit-transform:translateY(0);
+    -ms-transform:translateY(0);
+    -moz-transform:translateY(0);
+    -o-transform:translateY(0);
+    transform:translateY(0);
+}
+
+/* Paginate*/
+#page-nav
+{
+    position:fixed;
+    z-index:999;
+    top:90%;
+    width:100%;
+    text-align:center;
+}
+
+#page-nav span
+{
+    font-family:"Fira Sans";
+    color:#cecece;
+    height:1em;
+    width:1.3em;
+    font-size:0.85em;
+    text-align:center;
+    line-height:1em;
+    display:inline-block;
+    -webkit-transition:all 0.3s ease-in-out;
+    -webkit-transition-delay:0.2s;
+    -moz-transition:all 0.3s ease-in-out;
+    -moz-transition-delay:0.2s;
+    -ms-transition:all 0.3s ease-in-out;
+    -ms-transition-delay:0.2s;
+    -o-transition:all 0.3s ease-in-out;
+    -o-transition-delay:0.2s;
+    transition:all 0.3s ease-in-out;
+    transition-delay:0.2s;
+}
+
+.active
+{
+    color:#fff;
+    text-shadow:0 0 5px #f0f0f0;
+}

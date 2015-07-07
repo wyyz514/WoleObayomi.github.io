@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <title>ScrollJack</title>
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Fira+Sans|Bitter">
+        <link rel="stylesheet" type="text/css" href="/css/scrolljack.css">
+    </head>
+    <body>
+        <div class="page current unscrolled" data-sj-page="1">
+            <div class="page-content">
+                <div class="center-text">This is text.</div>
+            </div>
+        </div>
+        
+        <div class="page unscrolled" data-sj-page="2">
+            <div class="page-content">
+                <div class="center-text">This is text.</div>
+            </div>
+        </div>
+        
+        <div class="page unscrolled" data-sj-page="3">
+            <div class="page-content">
+                <div class="center-text">This is text.</div>
+            </div>
+        </div>
+        
+        <div class="page unscrolled" data-sj-page="4">
+            <div class="page-content">
+                <div class="center-text">This is text.</div>
+            </div>
+        </div>
+        
+        <div id="page-nav">
+            <span data-sj-target="1" class="active">1</span>
+            <span data-sj-target="2">2</span>
+            <span data-sj-target="3">3</span>
+            <span data-sj-target="4">4</span>
+        </div>
+        <script src="/js/utils.js"></script>
+        <script src="js/paginate.js"></script>
+        <script src="/js/scrolljack.js"></script>
+    </body>
+</html>
