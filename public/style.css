@@ -13,4 +13,65 @@ body
   height:100%;
   width:100%;
   background-color:#2ecc71;
+  display:flex;
+  align-items:center;
+  align-content:center;
+}
+
+#site-contents
+{
+  width:40em;
+  height:20em;
+  margin:auto;
+  box-sizing:border-box;
+  padding:10px;
+}
+
+#myname
+{
+  font-size:2em;
+  letter-spacing:2px;
+  line-height:3em;
+  font-family:"Montserrat";
+  text-transform:uppercase;
+}
+
+.site-content
+{
+  height:3em;
+  width:100%;
+  text-align:center;
+  color:#fff;
+}
+
+#someshit
+{
+  font-family:"Alegreya";
+  font-size:1.4em;
+  text-transform:capitalize;
+}
+
+#cmbm
+{
+  display:flex;
+  align-items:center;
+  width:12em;
+  margin:auto;
+}
+
+.site-social
+{
+  height:100%;
+  width:3em;
+  margin:5px;
+  box-sizing:border-box;
+  padding:3px;
+  text-align:center;
+  cursor:pointer;
+}
+
+.site-social i
+{
+  color:#fff;
+  font-size:2em;
 }
