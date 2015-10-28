@@ -3,7 +3,7 @@
   var canvasParent = document.querySelector("#site-canvas");
   var canvas = canvasParent.firstElementChild;
   var ctx = canvas.getContext("2d");
-  var height = window.screen.availHeight - 60;
+  var height = window.screen.availHeight;
   var width = window.screen.availWidth;
   var fizz = [];
   canvas.setAttribute("height",height);
@@ -18,7 +18,7 @@
       var xPos = Math.floor( Math.random() * width ) + 1;
       var opacity = Math.random() + 0.5;
       var radius = Math.floor( ( Math.random() * 3 ) + 1 )
-      var _fizz = new $(xPos,height + 100,radius,"rgba(29, 88, 35,"+opacity+")");
+      var _fizz = new $(xPos,height - radius/2,radius,"rgba(29, 88, 35,"+opacity+")");
       fizz.push(_fizz);
     }
   }
