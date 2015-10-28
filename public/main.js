@@ -15,7 +15,7 @@
   {
     for(var count = 0; count < 120; count++)
     {
-      var xPos = Math.floor( Math.random() * width ) + 1;
+      var xPos = Math.floor( Math.random() * width ) - 15;
       var opacity = Math.random() + 0.5;
       var radius = Math.floor( ( Math.random() * 3 ) + 1 )
       var _fizz = new $(xPos,height - radius/2,radius,"rgba(29, 88, 35,"+opacity+")");
