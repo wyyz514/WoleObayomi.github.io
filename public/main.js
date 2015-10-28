@@ -3,7 +3,7 @@
   var canvasParent = document.querySelector("#site-canvas");
   var canvas = canvasParent.firstElementChild;
   var ctx = canvas.getContext("2d");
-  var height = window.screen.availHeight - 100;
+  var height = window.screen.availHeight - 60;
   var width = window.screen.availWidth;
   var fizz = [];
   canvas.setAttribute("height",height);
