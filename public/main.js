@@ -3,8 +3,8 @@
   var canvasParent = document.querySelector("#site-canvas");
   var canvas = canvasParent.firstElementChild;
   var ctx = canvas.getContext("2d");
-  var height = window.screen.availHeight - 100;
-  var width = window.screen.availWidth;
+  var height = canvasParent.style.height = document.documentElement.clientHeight;
+  var width = canvasParent.style.width = document.documentElement.clientWidth;
   var fizz = [];
   canvas.setAttribute("height",height);
   canvas.setAttribute("width",width);
@@ -15,7 +15,7 @@
   {
     for(var count = 0; count < 120; count++)
     {
-      var xPos = Math.floor( Math.random() * width ) + 1;
+      var xPos = Math.floor( Math.random() * width ) - 15;
       var opacity = Math.random() + 0.5;
       var radius = Math.floor( ( Math.random() * 3 ) + 1 )
       var _fizz = new $(xPos,height + 100,radius,"rgba(29, 88, 35,"+opacity+")");

@@ -23,6 +23,9 @@ body
   width:40em;
   height:20em;
   margin:auto;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -o-box-sizing:border-box;
   box-sizing:border-box;
   padding:10px;
 }
@@ -44,10 +47,10 @@ body
   color:#fff;
 }
 
-#someshit
+#sub
 {
-  font-family:"Alegreya";
-  font-size:1.4em;
+  font-family:"Alegreya","Montserrat";
+  font-size:1.2em;
   text-transform:capitalize;
 }
 
@@ -64,6 +67,9 @@ body
   height:100%;
   width:3em;
   margin:5px;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -o-box-sizing:border-box;
   box-sizing:border-box;
   padding:3px;
   text-align:center;
@@ -87,9 +93,7 @@ body
 
 #site-canvas
 {
-  position:absolute;
-  height:100%;
-  width:100%;
+  position:fixed;
   top:0;
   left:0;
   z-index:0;

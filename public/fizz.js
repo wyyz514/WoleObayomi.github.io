@@ -6,7 +6,8 @@ function Fizz(x,y,r,color)
   this.y = y;
   this.r = r;
   this.color = color;
-  this.acc = Math.random() * 0.1 < 0.05 ? (Math.random() * 0.1) + 0.02 : Math.random() * 0.1 ;
+  var _acc = Math.random() * 0.1;
+  this.acc = _acc.toFixed(2) > 0.05 ? _acc : (Math.random() * 0.05) + 0.02;
 }
 
 Fizz.prototype.updateY = function (dt)
