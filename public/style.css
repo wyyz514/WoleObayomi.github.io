@@ -91,6 +91,12 @@ body
   letter-spacing:2px;
 }
 
+#portfolio a
+{
+  text-decoration:none;
+  color:#fff;
+}
+
 #site-canvas
 {
   position:fixed;
