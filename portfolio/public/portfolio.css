@@ -37,7 +37,6 @@ body
 #portfolio-uc-banner
 {
   position:absolute;
-  display:flex;
   top:0;
   left:0;
   height:40%;
@@ -51,9 +50,8 @@ body
   font-family:"Montserrat";
   text-transform:uppercase;
   letter-spacing:2px;
+  line-height:15em;
   text-align:center;
-  align-items:center;
-  align-contents:center;
   color:#fff;
 }
 
