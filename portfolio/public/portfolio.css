@@ -58,8 +58,78 @@ body
 #portfolio-projects
 {
   position:absolute;
-  top:40%;
-  left:0px;
+  top:55%;
+  left:5%;
   height:15em;
+  width:90%;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  box-sizing:border-box;
+  padding:10px;
+}
+
+.portfolio-project
+{
+  height:18em;
+  width:17em;
+  border:1px solid #cecece;
+  display:inline-block;
+  vertical-align:top;
+}
+
+.portfolio-project-title
+{
+  height:3em;
+  line-height:3em;
   width:100%;
+  background-color:#2C3E50;
+  font-family:"Lato";
+  letter-spacing:2px;
+  font-size:0.6em;
+  color:#fff;
+  text-align:center;
+  text-transform:uppercase;
+}
+
+.portfolio-project-links
+{
+  height:6em;
+  width:100%;
+  text-align:center;
+  line-height:6em;
+}
+
+.portfolio-project-links span
+{
+  font-size:2em;
+}
+
+.portfolio-project-links a
+{
+  text-decoration:none;
+  color:steelblue;
+}
+
+.portfolio-bar
+{
+  height:2px;
+  width:6em;
+  margin:auto;
+  background-color:#CECECE;
+}
+
+.portfolio-project-desc
+{
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  box-sizing:border-box;
+  padding:5px;
+  height:8em;
+  width:85%;
+  font-family:"Source Sans Pro";
+  font-size:14px;
+  margin:auto;
+  font-weight:bold;
 }
