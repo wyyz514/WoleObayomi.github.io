@@ -7,7 +7,7 @@ function Fizz(x,y,r,color)
   this.r = r;
   this.color = color;
   var _acc = Math.random() * 0.1;
-  this.acc = _acc > 0.05 ? _acc : (Math.random() * 0.05) + 0.05;
+  this.acc = _acc.toFixed(2) > 0.05 ? _acc : (Math.random() * 0.05) + 0.02;
 }
 
 Fizz.prototype.updateY = function (dt)
