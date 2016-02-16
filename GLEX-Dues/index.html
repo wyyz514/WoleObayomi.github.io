@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/lib/card-master/lib/css/card.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script type="text/javascript">
+      // This identifies your website in the createToken call below
+//      Stripe.setPublishableKey('pk_test_zURWdhv3wZ6Qq0SlIS3BtVtb');
+      Stripe.setPublishableKey('pk_live_W5CWaxDAqkC3NDQOjRw2UjjR');
+      // ...
+    </script>
+  </head>
+  <body>
+    <div class="modal">
+      <div id="modal-close">&times;</div>
+      <div id="modal-text">Thank you! You should be receiving an email shortly.</div>
+    </div>
+    <div class="container">
+      <div id="content">
+        <div class="card-wrapper">
+          <form name="dues-payment" id="payment-form" method="post">
+<!--            <h5 id="title">Dues Payment Form</h5>-->
+            <div class="errors-wrap">
+              <h5 class="errors"></h5>
+            </div>
+            <br>
+            <div class="form-input">
+              <div class="form-field">
+                <div class="popover popover-right" id="empty-ch">
+                  <div class="popover-body"><div class="popover-text">This field should not be empty</div></div>
+                </div>
+                <label for="name">Cardholder's Name<sup style="color:red;">*</sup></label><br>
+                <input type="text" autocorrect="off" spellcheck="false" 
+name="name" class="invalid" placeholder="Benjamin P. Runkle" required>
+              </div>
+            </div>
+            <div class="form-input">
+              <div class="form-field">
+                <div class="popover popover-left" id="empty-email">
+                  <div class="popover-body"><div class="popover-text">This field should not be empty</div></div>
+                </div>
+                <label for="email">Cardholder's Email<sup style="color:red;">*</sup></label><br>
+                <input type="email" autocorrect="off" spellcheck="false" 
+name="email" class="invalid" placeholder="bprunkle@sigmachi.com" 
+data-stripe="receipt_email" required>
+              </div>
+            </div>
+            <div class="form-input">
+              <div class="form-field">
+                <div class="popover popover-right invalid_number">
+                  <div class="popover-body"><div class="popover-text">This field should not be empty</div></div>
+                </div>
+                <label for="numb">Card Number<sup style="color:red;">*</sup></label><br>
+                <input type="text" name="number" autocorrect="off" spellcheck="false" data-stripe="number" class="invalid" required>
+              </div>
+            </div>
+            <div class="form-input">
+              <div id="form-inner">
+                <div class="mini-field">
+                  <label for="expiry">Expiry Date<sup style="color:red;">*</sup></label><br>
+                  <input type="text" name="expiry-month" data-stripe="exp-month" placeholder="MM" maxlength="2" required/>
+                  <input type="text" name="expiry-year" data-stripe="exp-year" placeholder="YY" maxlength="2" required/>
+                  <div class="popover popover-bottom invalid_expiry_year invalid_expiry_month">
+                    <div class="popover-body"><div class="popover-text">This field should not be empty</div></div>
+                  </div>
+                </div>
+                <div class="mini-field">
+                  <label for="cvc">CVC<sup style="color:red;">*</sup></label><br>
+                  <input type="text" name="cvc" data-stripe="cvc" class="invalid" required/>
+                  <div class="popover popover-bottom invalid_cvc">
+                    <div class="popover-body"><div class="popover-text">This field should not be empty</div></div>
+                  </div>
+                </div>
+                <div class="mini-field">
+                  <label for="amount">Amount<sup style="color:red;">*</sup></label><br>
+                  <input type="text" name="amount" class="invalid" placeholder="50.00" required/>
+                  <div class="popover popover-bottom">
+                    <div class="popover-body"><div class="popover-text">This field should not be empty</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="button-row">
+              <button type="submit" class="transmit">Transmit and Pay</button>
+            </div>
+          </form>
+      </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="assets/lib/card-master/lib/js/card.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
