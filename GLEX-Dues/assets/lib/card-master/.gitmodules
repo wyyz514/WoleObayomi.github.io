@@ -1,3 +1,0 @@
-[submodule "src/scss/bourbon"]
-	path = src/scss/bourbon
-	url = https://github.com/thoughtbot/bourbon.git
