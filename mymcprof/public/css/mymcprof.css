@@ -1,0 +1,494 @@
+body {
+  margin:0 !important;
+  overflow-x:hidden;
+}
+
+#mmp-content-wrap {
+  width:100%;
+  height:auto;
+  display:flex;
+  flex-direction:column;
+}
+
+#mmp-bg {
+  position:relative;
+  height:35em;
+  width:100%;
+  background-color:#DB302E;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#mmp-bg::before {
+  content:"";
+  position:absolute;
+  top:35em;
+  left:50%;
+  border-top:10px solid #DB302E;
+  border-left:9px solid transparent;
+  border-right:9px solid transparent;
+}
+
+#mmp-nav {
+  position:absolute;
+  display:flex;
+  z-index:100000;
+  height:3em;
+  width:100%;
+  top:0;
+  left:0;
+  justify-content:center;
+}
+
+#mmp-nav-bar {
+  display:flex;
+  flex-direction:row-reverse;
+  align-items:flex-end;
+  height:100%;
+  width:80%;
+}
+
+.mmp-nav-button {
+  height:2em;
+  width:6em;
+  text-align:center;
+  line-height:2em;
+  font-family:"Source Sans Pro";
+  font-size:0.85em;
+  letter-spacing:1px;
+  color:#fff;
+}
+
+#mmp-about {
+  height: 80%;
+  width:85%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.mmp-about-info {
+  height:3em;
+  width:18em;
+  margin-bottom:2px;
+  text-align:center;
+  line-height:3em;
+  color:#fff;
+  font-size:1.2em;
+}
+
+#mmp-title {
+  font-family:"Source Sans Pro";
+  letter-spacing:1px;
+  font-size:2em;
+  font-weight:700;
+}
+
+#mmp-slogan {
+  font-family:"Alegreya Sans";
+}
+
+#mmp-download-button {
+  background-color:#B71C1C;
+  border-radius:3px;
+  font-family:"Source Sans Pro";
+  letter-spacing:2px;
+  font-size:0.75em;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+#mmp-content-body {
+  height:auto;
+  width:90%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin:2em auto;
+}
+
+.mmp-instr {
+  height:29em;
+  width:100%;
+  position:relative;
+}
+
+.mmp-instr::before {
+  content:"";
+  position:absolute;
+  top:100%;
+  left:calc( ( 100% - 55px ) / 2);
+  height:1px;
+  width:55px;
+  background-color:#cecece;
+}
+
+.mmp-instr-hdr {
+  margin:auto;
+  text-align:center;
+  height:3em;
+  line-height:3em;
+  font-family:"Source Sans Pro";
+  font-weight:bold;
+  font-size:1.5em;
+  letter-spacing:1px;
+}
+
+.mmp-instr-img {
+  height:16em;
+  width:35em;
+  margin:auto;
+  display:flex;
+  justify-content:center;
+  flex-direction:column;
+  align-items:center;
+}
+
+#row {
+    flex-direction:row;
+}
+
+.mmp-instr-blrb {
+  height:8em;
+  width:40em;
+  margin:auto;
+  text-align:center;
+  padding-top:3em;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  color:grey;
+  font-family:"Source Sans Pro";
+  font-weight:400;
+  font-size:0.9em;
+  letter-spacing:1px;
+}
+
+.mmp-brwsr-bar {
+  height:2em;
+  width:30em;
+  background-color:#f0f0f0;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  display:flex;
+  align-items:center;
+  flex-direction:row;
+  padding:1px;
+}
+
+.mmp-bar-dot {
+  height:0.5em;
+  width:0.5em;
+  border-radius:100%;
+  background-color:#cecece;
+  margin-left:3px;
+  margin-right:3px;
+}
+
+#mmp-dot-red {
+  background-color:#e74c3c;
+}
+
+#mmp-dot-yellow {
+  background-color:#f1c40f;
+}
+
+#mmp-dot-green {
+  background-color:#2ecc71;
+}
+
+.mmp-brwsr-bod {
+  height:20em;
+  width:30em;
+  border-bottom:1px solid #f0f0f0;
+  border-left:1px solid #f0f0f0;
+  border-right:1px solid #f0f0f0;
+}
+
+.mmp-brwsr-srch {
+  width:100%;
+  height:1.8em;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-bottom:1px solid #f0f0f0;
+}
+
+.mmp-brwsr-srch-bar {
+  height:1.3em;
+  width:20em;
+  border-radius:2px;
+  border:1px solid #f0f0f0;
+  position:relative;
+}
+
+#mmp-dot-pulse {
+  position:absolute;
+  height:5px;
+  width:5px;
+  background-color:#e74c3c;
+  border-radius:100%;
+  border:1px solid #EF5350;
+  -webkit-animation:pulse 1s infinite;
+  animation:pulse 1s infinite;
+  -moz-animation:pulse 1s infinite;
+  top:0.45em;
+  left:19em;
+  -webkit-animation-timing-function:ease;
+}
+
+.mmp-popup {
+    position:absolute;
+    height:4em;
+    width:8em;
+    border:1px solid #f0f0f0;
+    top:1em;
+    left:13em;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    border-bottom-left-radius:3px;
+    border-bottom-right-radius:3px;
+    background-color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+.mmp-popup::before {
+  position:absolute;
+  content:"";
+  z-index:-2;
+  top:-0.55em;
+  left:6em;
+  border-bottom:8px solid #f0f0f0;
+  border-left:6px solid transparent;
+  border-right:6px solid transparent;
+}
+
+.mmp-popup::after {
+  position:absolute;
+  z-index:-1;
+  content:"";
+  top:-0.45em;
+  left:6em;
+  border-bottom:8px solid #fff;
+  border-left:6px solid transparent;
+  border-right:6px solid transparent;
+}
+
+#mmp-popup-hdr {
+  height:1em;
+  width:100%;
+  margin-bottom:3px;
+  background-color:#e74c3c;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+}
+
+#mmp-popup-srch {
+  height:1em;
+  width:90%;
+  margin:auto;
+  border:1px solid #f0f0f0;
+  border-radius:2px;
+  margin-bottom:3px;
+}
+
+#mmp-popup-buttons {
+    height:2em;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+
+.mmp-popup-button {
+    height:2em;
+    width:40%;
+    border-radius:2px;
+    background-color:#e74c3c;
+    font-family:"Source Sans Pro";
+    font-size:0.55em;
+    line-height:2em;
+    color:#fff;
+    text-align:center;
+    margin:0 auto;
+}
+
+.mmp-rating {
+    height:16em;
+    width:14em;
+    margin-bottom:4px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+}
+
+.mmp-rating-hdr {
+    width:14em;
+    height:1.5em;
+    background-color:#e74c3c;
+}
+
+.mmp-rating-body {
+    width:14em;
+    height:14.5em;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    border:1px solid #f0f0f0;
+}
+
+.mmp-rating-prof-head {
+  height:4em;
+  width:100%;
+  font-family:"Source Sans Pro";
+}
+
+.mmp-rating-prof-name {
+  font-size:0.7em;
+  text-transform:uppercase;
+  text-align:center;
+  height:2em;
+  line-height:2em;
+  color:#666;
+  letter-spacing:1px;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  padding:3px;
+}
+
+.mmp-rating-prof-faculty {
+  font-size:0.55em;
+  text-transform:uppercase;
+  text-align:center;
+  height:2em;
+  line-height:2em;
+  color:#666;
+  letter-spacing:1px;
+}
+
+.mmp-rating-prof-ratings {
+    height:10.5em;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.mmp-prof-rating {
+    height:5em;
+    font-family:"Source Sans Pro";
+    color:#e74c3c;
+}
+
+.r1 {
+    width:5em;
+}
+
+.r2 {
+    width:4em;
+}
+
+.mmp-prof-rating-criteria {
+    font-size:12px;
+    text-align:center;
+    height:2em;
+    width:100%;
+}
+
+.mmp-prof-rating-val {
+  font-size:1em;
+  height:3em;
+  line-height:3em;
+  text-align:center;
+  font-weight:700;
+}
+
+#nobar::before {
+    display:none;
+}
+
+#footer {
+    height:2em;
+    width:100%;
+    line-height:2em;
+    text-align:center;
+    font-family:"Roboto";
+    font-size:0.8em;
+    color:grey;
+}
+
+@-moz-keyframes pulse {
+  0% {
+    box-shadow:0 0 0px 2px #EF9A9A;
+  }
+
+  50% {
+    box-shadow:0 0 0px 4px #FFEBEE;
+  }
+
+  100% {
+    box-shadow:0 0 0px 6px #fff;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow:0 0 0px 2px #EF9A9A;
+  }
+
+  50% {
+    box-shadow:0 0 0px 4px #FFEBEE;
+  }
+
+  100% {
+    box-shadow:0 0 0px 6px #fff;
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow:0 0 0px 2px #EF9A9A;
+  }
+
+  50% {
+    box-shadow:0 0 0px 4px #FFEBEE;
+  }
+
+  100% {
+    box-shadow:0 0 0px 6px #fff;
+  }
+}
+
+@media (max-width:768px) and (max-width:640px){
+  .mmp-instr-img {
+    width:100%;
+  }
+
+  .mmp-instr-img > div {
+    width:100%;
+  }
+
+  .mmp-instr-blrb {
+    width:100%;
+  }
+
+  #row {
+    height:33em;
+    flex-wrap:wrap;
+  }
+
+  #nobar {
+    height:40em;
+  }
+}
