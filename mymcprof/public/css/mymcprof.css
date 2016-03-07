@@ -59,6 +59,7 @@ body {
   letter-spacing:1px;
   color:#fff;
   position:relative;
+  cursor:pointer;
 }
 
 .mmp-nav-button::after {
