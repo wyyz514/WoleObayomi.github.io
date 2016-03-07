@@ -58,6 +58,26 @@ body {
   font-size:0.85em;
   letter-spacing:1px;
   color:#fff;
+  position:relative;
+}
+
+.mmp-nav-button::after {
+    content:"";
+    position:absolute;
+    height:1px;
+    width:45%;
+    background-color:#fff;
+    top:100%;
+    left:calc((100% - 45%) / 2);
+    transform:scaleX(0);
+    transition:transform 0.2s ease-in-out;
+    -webkit-transform:scaleX(0);
+    -webkit-transition:-webkit-transform 0.2s ease-in-out;
+}
+
+.mmp-nav-button:hover::after{
+    transform:scaleX(100%);
+    -webkit-transform:scaleX(1);
 }
 
 #mmp-about {
