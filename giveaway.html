@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>G I V E A W A Y</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:800,400,300|Montserrat:700|Alegreya+Sans:400,800i"/>
+  </head>
+  <body>
+    <div class="ga-banner-container ga-header-font">
+      <div class="ga-banner-overlay"></div>
+      <div class="ga-banner"></div>
+      <div class="ga-banner-text ga-spaced-upcase ga-header-text ga-text-shadow ga-bolden">Osheaga Giveaway</div>
+    </div>
+    <div class="ga-presentation ga-default-font">
+      <h2 class="ga-bolden ga-spaced-upcase ga-header-font">Hey You!</h2>
+      <div class="ga-presentation-text">
+        <ul>
+          <li>
+            <p class="ga-normal">Has Osheaga Music Festival been on your summer bucket-list for ever?</p>
+          </li>
+          <li>
+            <p class="ga-normal">Have you been picturing a
+          polaroid pic of yourself lying on the hills with your friends, beer in hand, sun in the face, music in the ears and
+          that glorious Osheaga sign in the back?
+            </p>
+          </li>
+      </div>
+    </div>
+    <div class="ga-presentation ga-default-font" id="blue-bg">
+      <h2 class="ga-bolden ga-spaced-upcase ga-header-font">Well here you go!</h2>
+      <div class="ga-presentation-text">
+        <p class="ga-light">StudEtree is launching the coolest of contests to make Osheaga 2016 happen for you and a friend.</p>
+      </div>
+    </div>
+    <div class="ga-form-fb ga-default-font">
+      <h2 class="ga-spaced-upcase ga-header-font">Got you?</h2>
+      <p class="ga-normal">Here are the few simple steps to follow for the win:</p>
+      <ol>
+        <li>
+          <p class="ga-normal">Like our post!</p>
+        </li>
+        <li>
+          <p class="ga-normal">Like our Facebook page!</p>
+        </li>
+        <li>
+          <p class="ga-normal">Complete our online form!</p>
+        </li>
+      </ol>
+      <div class="ga-form-fb-container">
+        <div class="ga-form">
+          <form>
+            <div class="ga-input">
+              <label class="ga-normal">Full Name</label>
+              <input type="text"/>
+            </div>
+            <div class="ga-input">
+              <label class="ga-normal">Email Address</label>
+              <input type="email"/>
+            </div>
+            <div class="ga-input">
+              <label class="ga-normal">School</label>
+              <input type="text"/>
+            </div>
+            <div class="ga-input">
+              <label class="ga-normal">Terms and Conditions</label>
+              <div class="ga-checkbox-input">
+                <input type="checkbox"/> <span class="ga-normal ga-checkbox-text">I accept.</span>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="ga-divider"></div>
+        <div class="ga-fb">
+          <div class="temp"><span class="ga-subtle">Embedded page</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="ga-presentation ga-default-font">
+      <h2 class="ga-bolden ga-spaced-upcase ga-header-font">But there's more!</h2>
+      <p class="ga-normal">Refer 3 friends to enter the contest and gain 2 extra entries in our draw!</p><br>
+      <form>
+        <div class="ga-input">
+          <label class="ga-normal">Friend's Email Address</label>
+          <input type="email"/>
+        </div>
+      </form>
+    </div>
+    
+    <style>
+    body {
+  margin:0;
+}
+
+.ga-banner-container {
+  height:15em;
+  width:100%;
+}
+
+.ga-banner-container > * {
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.ga-banner-overlay {
+  height:inherit;
+  width:inherit;
+  opacity:0.9;
+  background-color:#333;
+  z-index:1;
+}
+
+.ga-banner {
+  height:inherit;
+  width:inherit;
+  background-image:url("https://images.unsplash.com/photo-1466150036782-869a824aeb25?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=733db673caa0c1b7f54d495e92bdadaa");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center center;
+  z-index:0;
+}
+
+.ga-banner-text {
+  height:inherit;
+  width:inherit;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+  z-index:5;
+}
+
+.ga-default-font {
+  font-family:"Source Sans Pro";
+}
+
+.ga-header-font {
+  font-family:"Montserrat";
+  font-weight:800;
+}
+
+.ga-spaced-upcase {
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+.ga-header-text {
+  font-size:2em;
+}
+
+.ga-text-shadow {
+  text-shadow: 3px 3px 3px #000;
+}
+
+.ga-bolden {
+  font-weight:800;
+}
+
+.ga-normal {
+  font-weight:400;
+}
+
+.ga-light {
+  font-weight:300;
+}
+
+.ga-subtle {
+  color:grey;
+}
+
+.ga-presentation {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  box-sizing:border-box;
+  padding:2em;
+}
+
+.ga-presentation-text {
+  width:60%;
+  margin:auto;
+  line-height:1.5em;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#blue-bg {
+  color:#fff;
+  background-color:#2C3E50;
+}
+
+.ga-presentation ul {
+  list-style-type:square;
+}
+
+.ga-form-fb {
+  display:flex;
+  width:100%;
+  height:auto;
+  flex-direction:column;
+  align-items:center;
+  justify-content;
+  background-color:#f0f0f0;
+  box-sizing:border-box;
+  padding:2em;
+}
+
+.ga-form {
+  height:auto;
+  width:49%;
+}
+
+.ga-form-fb-container {
+  height:auto;
+  width:100%;
+  margin:auto;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+}
+
+form {
+  width:100%;
+  height:auto;
+}
+
+.ga-input {
+  width:25em;
+  height:4em;
+  position:relative;
+  padding-bottom:2em;
+  margin:auto;
+}
+
+input[type="text"] {
+  text-transform:capitalize;
+}
+
+.ga-input input[type="text"], .ga-input input[type="email"] {
+  appearance:none;
+  -webkit-appearance:none;
+  border:none;
+  border-bottom:1px solid #cecece;
+  background-color:transparent;
+  width:100%;
+  font-size:1em;
+  position:absolute;
+  padding:5px 5px 5px 0;
+  top:2em;
+}
+
+.ga-input input:focus {
+  outline:none;
+}
+
+.ga-checkbox-input {
+  position:absolute;
+  top:3em;
+}
+
+.ga-input label {
+  position:absolute;
+  top:0;
+  color:#cecece;
+  font-size:0.85em;
+}
+
+ol {
+  width:12em;
+  margin:auto;
+  margin-bottom:2em;
+}
+
+.ga-divider {
+  width:2px;
+  background-color:#cecece;
+  height:20em;
+}
+
+.ga-fb {
+  width:49%;
+  text-align:center;
+}
+
+    </style>
+  </body>
+</html>
