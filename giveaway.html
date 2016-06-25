@@ -3,320 +3,726 @@
   <head>
     <meta charset="utf-8"/>
     <title>G I V E A W A Y</title>
-    <!--<link rel="stylesheet" type="text/css" href="/assets/givaway.css"/>-->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:900|Bitter|Lato"/>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/givaway.css"/>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:900,700,400|Bitter|Lato"/>
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   </head>
   <body>
-    <div class="ga-banner-container ga-header-font">
-      <div class="ga-banner-overlay"></div>
-      <div class="ga-banner"></div>
-      <div class="ga-banner-text ga-spaced-upcase ga-header-text ga-text-shadow ga-bolden">Osheaga Dreamin'?</div>
-    </div>
+    <section class="ga-content ga-flexin">
+      <div class="ga-modal-overlay ga-flexin">
+      </div>
+      <div class="ga-modal">
+        <div class="ga-modal-header ga-flexin">
+          <div class="ga-modal-close">
+            <i class="ion-close-circled"></i>
+          </div>
+          <div class="ga-modal-title ga-flexin ga-font-smooth">You are now in the contest!</div>
+        </div>
+        <div class="ga-modal-content">
+          <div class="ga-fb-share ga-flexin">
+            <div class="ga-modal-descr ga-font-smooth" id="fb-sh">
+              Share to Facebook to gain 1 extra entry.
+            </div>
+            <div class="ga-share-container ga-flexin">
+              <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fwww.studetree.com&layout=button_count&mobile_iframe=true&width=91&height=20&appId" width="91" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
+          </div>
+          <br>
+          <div class="ga-modal-descr ga-font-smooth">
+            Invite friends by email to increase your odds.<br>
+            For every 3 friends invited, you get 2 extra entries.
+          </div>
+          <br>
+          <div class="ga-modal-descr">Have Gmail?</div>
+          <div class="ga-modal-descr" id="google-link">
+            <div class="ga-input">
+              <button id="google-button"><a href="/osheaga-giveaway/invite/google">Invite friends directly</a></button>
+            </div>
+          </div>
+          <div class="ga-modal-descr" id="with-bar">or enter their emails below.</div><br><br>
+          <div class="ga-input ga-flexin" id="modal-input">
+            <label class="ga-input-label">Friend's Email Address</label>
+            <input type="email">
+          </div>
+          <div class="ga-email-list-container">
+            <div class="ga-email-list-empty ga-flexin">
+              You haven't invited anyone.
+            </div>
+            <!-- <div class="ga-email-list-item ga-flexin">
+              <div class="ga-email">oluwole.obayomi@gmail.com</div>
+              <div class="ga-remove">Remove</div>
+            </div>
+            <div class="ga-email-list-item ga-flexin">
+              <div class="ga-email">oluwole.obayomi@gmail.com</div>
+              <div class="ga-remove">Remove</div>
+            </div>
+            <div class="ga-email-list-item ga-flexin">
+              <div class="ga-email">oluwole.obayomi@gmail.com</div>
+              <div class="ga-remove">Remove</div>
+            </div>
+            <div class="ga-email-list-item ga-flexin">
+              <div class="ga-email">oluwole.obayomi@gmail.com</div>
+              <div class="ga-remove">Remove</div>
+            </div>
+            <div class="ga-email-list-item ga-flexin">
+              <div class="ga-email">oluwole.obayomi@gmail.com</div>
+              <div class="ga-remove">Remove</div>
+            </div>
+            <div class="ga-email-list-item ga-flexin">
+              <div class="ga-email">oluwole.obayomi@gmail.com</div>
+              <div class="ga-remove">Remove</div>
+            </div> -->
 
-    <div class="ga-presentation ga-default-font">
-      <h2 class="ga-bolden ga-spaced-upcase ga-header-font">Well here you go!</h2>
-      <div class="ga-presentation-text">
-        <p class="ga-light">StudEtree is launching the coolest of contests to make Osheaga 2016 happen for you and a friend.</p>
-      </div>
-    </div>
-    <div class="ga-presentation ga-default-font ga-pink-bg">
-      <h2 class="ga-spaced-upcase ga-header-font">Got You?</h2>
-      <div class="ga-presentation-text">
-        <p class="ga-light">Here are the simple steps to follow for the win:</p>
-      </div><br>
-      <div class="ga-list">
-        <div class="ga-list-item">
-          <div class="ga-list-index">1</div>
-          <div class="ga-list-content">Like our post!</div>
-        </div>
-        <div class="ga-list-item">
-          <div class="ga-list-index">2</div>
-          <div class="ga-list-content">Like us on Facebook!</div>
-        </div>
-        <div class="ga-list-item">
-          <div class="ga-list-index">3</div>
-          <div class="ga-list-content">Complete our online form!</div>
+          </div>
+          <div class="ga-modal-buttons ga-flexin">
+            <div class="ga-input ga-flexin">
+              <button>Invite</button>
+            </div>
+            <div class="ga-input ga-flexin">
+              <button>No Thanks</button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="ga-form-fb ga-default-font">
-      <div class="ga-form-fb-container">
-        <div class="ga-form">
-          <form>
-            <div class="ga-input">
-              <label class="ga-normal">Full Name</label>
-              <input type="text"/>
-            </div>
-            <div class="ga-input">
-              <label class="ga-normal">Email Address</label>
-              <input type="email"/>
-            </div>
-            <div class="ga-input">
-              <label class="ga-normal">School</label>
-              <input type="text"/>
-            </div>
-            <div class="ga-input">
-              <label class="ga-normal">Terms and Conditions</label>
-              <div class="ga-checkbox-input">
-                <input type="checkbox"/> <span class="ga-normal ga-checkbox-text">I accept the <a href="#">Terms and Conditions</a>.</span>
+
+      <div class="ga-skyline"></div>
+      <div class="ga-sw">
+      </div>
+      <div class="ga-promo-text ga-flexin ga-txt-white ga-hdr-font ga-font-smooth">StudEtree wants to make Osheaga happen for you and a friend.</div>
+      <div class="ga-promo-steps">
+        <br><br>
+        <div class="ga-flexin ga-txt-white ga-steps-info ga-hdr-font ga-font-smooth ">How to enter:</div>
+        <div class="ga-flexin ga-steps">
+          <div class="ga-step ga-flexin">
+            <div class="ga-step-num"><img src="/assets/images/uno.png"></div>
+            <div class="ga-step-info ga-list-font ga-txt-white ga-font-smooth ">Like our Facebook post!</div>
+          </div>
+          <div class="ga-step ga-flexin">
+            <div class="ga-step-num"><img src="/assets/images/dos.png"></div>
+            <div class="ga-step-info ga-list-font ga-txt-white ga-font-smooth ">Like our Facebook page!</div>
+          </div>
+          <div class="ga-step ga-flexin">
+            <div class="ga-step-num"><img src="/assets/images/tres.png"></div>
+            <div class="ga-step-info ga-list-font ga-txt-white ga-font-smooth ">Complete the form below!</div>
+          </div>
+        </div>
+      </div>
+      <div class="ga-form-fb ga-flexin">
+        <div class="ga-container ga-flexin" id="form-container">
+          <br>
+          <div class="ga-form-wrap">
+            <form>
+              <div class="ga-input ga-flexin">
+                <label class="ga-input-label ga-txt-white ga-font-smooth">Full Name</label>
+                <input type="text" name="name" id="fname" style="text-transform:capitalize;" required>
               </div>
-            </div>
-          </form>
+              <div class="ga-input ga-flexin">
+                <label class="ga-input-label ga-txt-white ga-font-smooth">Email Address</label>
+                <input type="email" name="email" id="email" required>
+              </div>
+              <div class="ga-input ga-flexin">
+                <label class="ga-input-label ga-txt-white ga-font-smooth">School</label>
+                <input type="text" id="university_id" name="university_id" style="text-transform:capitalize;" required>
+              </div>
+              <div class="ga-input ga-flexin">
+                <div class="ga-checkbox ga-txt-white">
+                  <input type="checkbox" required>
+                  <span class="ga-emph ga-font-smooth">I accept the <a href="#">Terms and Conditions</a></span>
+                </div>
+              </div>
+              <div class="ga-input ga-flexin">
+                <button id="submit_info" type="submit">Submit</button>
+              </div>
+            </form>
+            <div class="ga-entry-boost">Increase your chances of winning</div>
+          </div>
         </div>
-        <div class="ga-divider"></div>
-        <div class="ga-fb">
-          <div class="temp"><span class="ga-subtle">Embedded page</span></div>
+        <div class="ga-container ga-flexin ga-center-content">
+          <div class="ga-form-wrap">
+            <iframe id="promo" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D1741851346027311%26id%3D1737887686423677%26substory_index%3D0&width=350&show_text=true&appId=1503879163227740&height=337" width="350" height="337" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="ga-presentation ga-default-font">
-      <h2 class="ga-bolden ga-spaced-upcase ga-header-font">there's more!</h2>
-      <p class="ga-normal">Refer 3 friends to enter the contest and gain 2 extra entries in our draw!</p><br>
-      <form>
-        <div class="ga-input">
-          <label class="ga-normal">Friend's Email Address</label>
-          <input type="email"/>
-        </div>
-      </form>
-    </div>
-    
+      <div class="ga-form-xtra"></div>
+    </section>
     <style>
       body {
   margin:0;
+  padding-bottom:0 !important;
 }
 
-.text-center {
-    text-align:center;
+.ga-txt-shadow {
+  text-shadow:0 3px 2px #000;
+}
+.ga-txt-white {
+  color:#f0f0f0;
 }
 
-.ga-banner-container {
-  height:25em;
-  width:100%;
+.ga-hdr-font {
+  font-family:Roboto;
+  letter-spacing:1.4px;
+  font-size:2em;
+  text-align:center;
 }
 
-.ga-banner-container > * {
-  position:absolute;
-  top:0;
-  left:0;
-}
-
-.ga-banner-overlay {
-  height:inherit;
-  width:inherit;
-  /*opacity:0.9;
-  background-color:#333;*/
-  z-index:1;
-}
-
-.ga-banner {
-  height:inherit;
-  width:inherit;
-  background-image:url("/osheaga.jpg");
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center center;
-  z-index:0;
-}
-
-.ga-banner-text {
-  height:inherit;
-  width:inherit;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  color:#fff;
-  z-index:5;
-  font-size:4em;
-}
-
-.ga-default-font {
-  font-family:"Bitter";
-}
-
-.ga-header-font {
+.ga-list-font {
   font-family:"Roboto";
-  letter-spacing:1px;
+  font-size:1em;
+  font-weight:700;
 }
 
-.ga-spaced-upcase {
-  text-transform:uppercase;
-  letter-spacing:2px;
-}
-
-.ga-header-text {
-  font-size:4em;
-}
-
-.ga-text-shadow {
-  text-shadow: 3px 3px 3px #000;
-}
-
-.ga-bolden {
-  font-weight:800;
-}
-
-.ga-normal {
-  font-weight:400;
-}
-
-.ga-light {
-  font-weight:300;
-}
-
-.ga-subtle {
-  color:grey;
-}
-
-.ga-presentation {
-  display:flex;
+.ga-content {
+  height:100vh;
+  background-size:cover;
+  width:100%;
+  background:-webkit-linear-gradient(-90deg, #46194D, #46194D, #772877, #772877, #d94082);
   flex-direction:column;
   align-items:center;
-  box-sizing:border-box;
-  padding:2em;
-  height:20em;
 }
 
-.ga-presentation-text {
-  width:70%;
-  line-height:1.5em;
-  display:flex;
+.ga-promo-text {
+  font-weight:900;
+  height:3em;
+  width:100%;
+  align-items:flex-end;
   justify-content:center;
-  align-items:center;
 }
 
-#blue-bg {
-  color:#fff;
-  background-color:#61c8d5;
-}
-
-.ga-form-fb {
+.ga-flexin {
   display:flex;
-  width:100%;
+}
+
+.ga-steps-info {
+  text-align:center;
+  font-size:1.2em;
+  font-weight:700;
   height:auto;
-  flex-direction:column;
   align-items:center;
-  justify-content;
-  background-color:#BBFFFF;
-  box-sizing:border-box;
-  padding:2em;
+  justify-content:center;
+  height:1em;
+  letter-spacing:normal;
 }
 
-.ga-form {
-  height:auto;
-  width:49%;
+.ga-font-smooth {
+  -webkit-font-smoothing:antialiased;
 }
 
-.ga-form-fb-container {
-  height:auto;
+.ga-steps {
   width:100%;
-  margin:auto;
-  display:flex;
+  height:5.5em;
+  flex-direction:row;
+  align-items:center;
+  position:relative;
+}
+
+.ga-steps:after {
+  position:absolute;
+  content:"";
+  height:1px;
+  width:2em;
+  top:100%;
+  left:calc(50% - 1em);
+  background-color:#fff;
+}
+
+.ga-step {
   flex-direction:row;
   align-items:center;
   justify-content:center;
+  width:20em;
 }
 
-form {
+.ga-step-num {
+  height:inherit;
+  width:auto;
+}
+
+.ga-step-num img {
+  height:2em;
+  width:2em;
+}
+
+.ga-step-info {
+  width:auto;
+  padding-left:15px;
+  padding-right:15px;
+  box-sizing:border-box;
+  line-height:2.5em;
+}
+
+.ga-form-fb {
+  justify-content:center;
+  margin-top:25px;
+  width:60%;
+  z-index:2;
+}
+
+#promo {
+  background-color:#fff;
+  height:inherit;
+  width:inherit;
+}
+
+.ga-sw {
   width:100%;
+  height:15em;
+  position:fixed;
+  top:35%;
+  background-image:url("/assets/images/SoundwavePlainNew.png");
+  background-repeat:no-repeat;
+  background-size:100%;
+  z-index:1;
+  background-position:0 -7em;
+  opacity:0.5;
+}
+
+.ga-container {
   height:auto;
+  width:25em;
+}
+
+.ga-center-content {
+  align-items:center;
+  justify-content:center;
+}
+
+.ga-form-wrap {
+  height:20.3em;
+  width:22em;
+  flex-direction:column;
+  justify-content:center;
 }
 
 .ga-input {
-  width:25em;
-  height:4em;
+  height:3em;
+  width:100%;
+  text-align:center;
+  align-items:center;
+  justify-content:center;
   position:relative;
-  padding-bottom:2em;
-  margin:auto;
+  margin-bottom:10px;
 }
 
-input[type="text"] {
-  text-transform:capitalize;
-}
-
-.ga-input input[type="text"], .ga-input input[type="email"] {
+.ga-input input[type="text"],.ga-input input[type="email"] {
   appearance:none;
   -webkit-appearance:none;
+  border-radius:4px;
+  height:1.5em;
+  width:85%;
   border:none;
-  border-bottom:1px solid #cecece;
-  background-color:transparent;
-  width:100%;
+  padding:5px 5px 5px 10px;
   font-size:1em;
-  position:absolute;
-  padding:5px 5px 5px 0;
-  top:2em;
+  font-family:Roboto;
 }
 
 .ga-input input:focus {
   outline:none;
 }
 
-.ga-checkbox-input {
-  position:absolute;
-  top:3em;
+.ga-input button {
+  appearance:none;
+  -webkit-appearance:none;
+  background-color:#fff;
+  height:2.5em;
+  width:13em;
+  border-radius:3px;
+  border:none;
+  font-size:1em;
+  color:#46194D;
+  font-weight:900;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  -webkit-font-smoothing:antialiased;
+  transition:all 0.5s ease-in-out;
+  -webkit-transition:all 0.5s ease-in-out;
+  cursor:pointer;
+  outline:none;
 }
 
-.ga-input label {
-  position:absolute;
-  top:0;
-  color:#cecece;
-  font-size:0.85em;
-}
-
-ol {
-  width:12em;
-  margin:auto;
-  margin-bottom:2em;
-}
-
-.ga-divider {
-  width:2px;
-  background-color:#cecece;
-  height:20em;
-}
-
-.ga-fb {
-  width:49%;
-  text-align:center;
-}
-
-.ga-list {
-  display:flex;
-  height:auto;
-  flex-direction:row;
-  width:100%;
-  justify-content:center;
-  align-items:center;
-}
-
-.ga-list-item {
-  display:flex;
-  height:auto;
-  width:33%;
-  flex-direction:column;
-  align-items:center;
-}
-
-.ga-list-index, .ga-list-content {
-  height:2em;
-  line-height:2em;
-  text-align:center;
-}
-
-.ga-list-index {
-  width:2em;
-  border-radius:100px;
-  background-color:#000;
+.ga-input button:hover {
+  background-color:#46194D;
   color:#fff;
 }
 
-.ga-list-content {
+.ga-input-label {
+  position:absolute;
+  font-family:Roboto;
+  font-size:13px;
+  text-transform:capitalize;
+  top:-10px;
+  font-weight:bold;
+}
+
+.ga-checkbox {
+  width:100%;
+  margin-left:15px;
+}
+
+.ga-emph {
+  font-style:italic;
+  font-weight:400;
+  color:inherit;
+  font-size:12px;
+  font-family:Roboto;
+}
+
+.ga-emph a {
+  color:inherit;
+}
+
+.ga-skyline {
+  height:6em;
+  width:100%;
+  position:fixed;
+  top:calc(100% - 6em);
+  left:0;
+  background-image:url("/assets/images/SkylineShallow2BLUE.png");
+  /*background-image:url("/assets/images/SkylineShallow3.png");*/
+  background-size:cover;
+  background-repeat:no-repeat;
+  /*background-position: 0 1em;*/
+  /*background-color:#E0F8FC;*/
+}
+
+.ga-modal-overlay {
+  height:100%;
+  width:100%;
+  background-color:#222;
+  opacity:0.9;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index: 321;
+  justify-content:center;
+  align-items:center;
+  display:none;
+}
+
+.ga-modal {
+  height:36em;
+  width:32em;
+  background-color:#fff;
+  border-radius:15px;
+  position:absolute;
+  z-index:3210;
+  top:calc(50% - 18em);
+  left:calc(50% - 16em);
+  display:none;
+}
+
+.ga-modal-header {
+  width:100%;
+  height:4em;
+  justify-content:center;
+  align-items:center;
+  flex-direction:row;
+  border-bottom:1px solid #f0f0f0;
+  padding-bottom:5px;
+  position:relative;
+}
+
+.ga-modal-title {
+  font-size:1.2em;
+  justify-content:center;
+  align-items:flex-end;
+  font-family:Roboto;
+  height:3em;
+  width:auto;
+  font-weight:bold;
+  box-sizing:border-box;
+  padding:10px;
+}
+
+.ga-modal-close {
+  position:absolute;
+  height:2em;
+  width:2em;
+  top:1.3em;
+  left:calc(100% - 3em);
+  color:#46194D;
+  cursor:pointer;
+}
+
+.ga-modal-close i {
+  font-size:2em;
+}
+
+.sub {
+  font-size:1em;
+  height:2em;
+  font-weight:normal;
+  align-items:center;
+}
+
+.ga-modal-content {
+  max-width:29em;
+  height:auto;
+  margin:auto;
+  box-sizing:border-box;
+  padding:20px 10px 10px 10px;
+}
+
+.ga-fb-share {
+  align-items:center;
+  justify-content:center;
+  height:auto;
   width:100%;
 }
 
-.ga-pink-bg {
-  background-color:#e46ea7;
+.ga-share-container {
+  height:3em;
+  width:25%;
+  align-items:center;
+  position:relative;
+}
+
+.ga-modal-descr {
+  height:auto;
+  width:100%;
+  font-family:Roboto;
+  display:block;
+  text-align:center;
+}
+
+#modal-input {
+  width:100%;
+  justify-content:center;
+}
+
+#modal-input label {
+  font-weight:normal;
+  text-align:center;
+}
+
+#modal-input input {
+  border:1px solid #cecece;
+}
+
+.ga-email-list-container {
+  width:100%;
+  height:8em;
+  overflow:scroll;
+  margin:auto;
+}
+
+.ga-email-list-item {
+  width:86%;
+  margin:auto;
+  border-left:2px solid #46194D;
+  align-items:center;
+  height:2.9em;
+  padding-left:10px;
+  font-family:Roboto;
+  font-size:14px;
+  color:grey;
+  letter-spacing:1.4px;
+  margin-bottom:5px;
+}
+
+.ga-email-list-empty {
+  height:inherit;
+  align-items:center;
+  justify-content:center;
+  color:#cecece;
+  font-size:1.1em;
+  font-family:Roboto;
+}
+
+.ga-email {
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+  width:80%;
+}
+
+.ga-remove {
+  width:20%;
+}
+
+#fb-sh {
+  width:66%;
+}
+
+#with-bar {
+  position:relative;
+}
+
+#with-bar:after {
+  position:absolute;
+  content:"";
+  height:1px;
+  width:2em;
+  background-color:#000;
+  top:calc(50% + 1em);
+  left:calc(50% - 1em);
+}
+
+#google-button {
+  height:2.5em;
+  width:auto;
+  line-height:2.2em;
+  background-color:#EA4335;
+  color:#fff;
+  font-size:12px;
+}
+
+#google-button a {
+  color:#fff;
+  text-decoration:none;
+}
+
+#google-link .ga-input{
+  margin-top:10px;
+  height:auto;
+}
+
+.ga-entry-boost {
+  text-align:center;
+  font-family:Roboto;
+  color:#fff;
+  letter-spacing:1px;
+  font-size:12px;
+  font-weight:900;
+  -webkit-font-smoothing:antialiased;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+
+@media only screen and (max-width:768px) {
+  .ga-content {
+    height:auto;
+  }
+
+  .ga-hdr-font {
+    font-size:1em;
+    height:5em;
+    justify-content:center;
+  }
+
+  .ga-steps-info {
+    align-items:flex-start;
+    height:3em;
+  }
+
+  .ga-steps {
+    flex-direction:column;
+    height:auto;
+  }
+
+  .ga-step {
+    height:3em;
+  }
+
+  .ga-step-num {
+    height:2em;
+    width:2em;
+  }
+
+  .ga-step-info {
+    height:inherit;
+    width:15em;
+  }
+
+  .ga-form-fb {
+    flex-direction:column-reverse;
+    width:100%;
+  }
+
+  .ga-container {
+    width:100%;
+    justify-content:center;
+    margin-bottom:15px;
+  }
+
+  .ga-fb-share {
+    flex-direction:column;
+  }
+
+  .ga-modal {
+    height:100vh;
+    width:100%;
+    border-radius:0;
+    top:0;
+    position:fixed;
+    left:0;
+    overflow:scroll;
+  }
+
+  #fb-sh {
+    width:100%;
+  }
+
+  .ga-modal-title {
+    font-size:1em;
+  }
+
+  .ga-modal-close i {
+    font-size:1.5em;
+  }
+
+  .ga-modal-buttons button {
+    width:9em;
+  }
+
+  .ga-email-list-item {
+    height:2em;
+  }
+
+  .ga-form-wrap {
+    width:100%;
+  }
+
+  .ga-email-list-container {
+    height:6em;
+  }
+
+  .ga-sw {
+    display:none;
+  }
 }
 
     </style>
+    <script src="{{asset('assets/plugins/JQuery/JQuery-2.1.4.min.js')}}"></script>
+    <script type="text/javascript">
+
+    $.ajaxSetup({
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+    });
+
+    $.ajaxPrefilter(function(options, originalOptions, xhr) { // this will run before each request
+      var token = $('meta[name="csrf-token"]').attr('content'); // or _token, whichever you are using
+
+      if (token) {
+        return xhr.setRequestHeader('X-CSRF-TOKEN', token); // adds directly to the XmlHttpRequest Object
+      }
+    });
+
+
+      function validate(toSubmit) {
+        var keys = Object.keys(toSubmit);
+
+        return keys.filter(function(key){ return toSubmit[key] == "";}).length == 0;
+      }
+
+      var postRoute = "{{route('giveaway@informationSubmit')}}";
+
+      $(".ga-entry-boost").click(function(){
+        $(".ga-modal-overlay").fadeIn(1000);
+        $(".ga-modal").fadeIn(1000);
+      });
+
+      $(".ga-modal-overlay").click(function(){
+        $(this).fadeOut(200);
+        $(".ga-modal").fadeOut(200);
+      });
+
+      $(".ga-modal-close").click(function(){
+        $(".ga-modal-overlay").trigger("click");
+      });
+    </script>
   </body>
 </html>
