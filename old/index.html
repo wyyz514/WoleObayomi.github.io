@@ -53,9 +53,15 @@
         
         <style>
             .flex-container {
+                display: -webkit-box;
+	            display: -webkit-flex;
+	            display: -ms-flexbox;
                 display:flex;
                 height:20em;
                 width:16em;
+                -webkit-box-orient: vertical;
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
                 flex-direction:column;
             } 
             
@@ -88,12 +94,21 @@
                 border:1px solid #f0f0f0;
                 height:14em;
                 width:100%;
+                display: -webkit-box;
+            	display: -webkit-flex;
+            	display: -ms-flexbox;
                 display:flex;
+                -webkit-box-orient: vertical;
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
                 flex-direction:column;
             }
             
             .bottom {
                 border:1px solid #f0f0f0;
+                display: -webkit-box;
+	            display: -webkit-flex;
+            	display: -ms-flexbox;
                 display:flex;
                 flex-direction:row;
                 align-items:center;
