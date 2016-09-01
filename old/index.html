@@ -14,30 +14,92 @@
     </head>
     <body>
 <!--m_cont=main content, hdr=header, n_tt=name title, p-inf=personal info, t_b=tid_bits, upd_t=updating text-->
-        <div class="m_cont">
-            <div class="hdr">
-                <p class="n_tt">Oluwole Obayomi</p>
+        <!--<div class="m_cont">-->
+        <!--    <div class="hdr">-->
+        <!--        <p class="n_tt">Oluwole Obayomi</p>-->
+        <!--    </div>-->
+        <!--    <div class="p_inf">-->
+        <!--        <ul>-->
+        <!--            <li class="t_b" id="major">Software Engineering Major</li>-->
+        <!--            <li class="t_b" id="web_d">Interested in Web Development</li>-->
+        <!--            <li class="t_b" id="skl">McGill University</li>-->
+        <!--            <li class="t_b" id="loc">Nigeria | Canada</li>-->
+        <!--            <li class="t_b" id="upd">Recently <span style="text-decoration:underline;">started learning MeteorJS</span></li>-->
+        <!--        </ul>-->
+        <!--    </div>-->
+        <!--    <br/><br/>-->
+        <!--    <div class="contact">-->
+        <!--        <div class="hdr">-->
+        <!--            <p class="n_tt">Contact Me</p>-->
+        <!--        </div>-->
+        <!--        <div class="icons">-->
+        <!--            <div id="email"><span class="fa fa-paper-plane-o"></span><div id="email_t"><a href="#"></a></div></div>-->
+        <!--            <div id="fb"><span class="fa fa-facebook"></span><div id="fb_t"><a href="https://www.facebook.com/wole.obayomi.7" target="_blank"></a></div></div>-->
+        <!--            <div id="twitter"><span class="fa fa-twitter"></span><div id="tw_t"><a href="https://twitter.com/WoleO94" target="_blank"></a></div></div>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--</div>-->
+        <div class="flex-container">
+            <div class="top">
+                <div class='box red'></div>
+                <div class="box blue"></div>
             </div>
-            <div class="p_inf">
-                <ul>
-                    <li class="t_b" id="major">Software Engineering Major</li>
-                    <li class="t_b" id="web_d">Interested in Web Development</li>
-                    <li class="t_b" id="skl">McGill University</li>
-                    <li class="t_b" id="loc">Nigeria | Canada</li>
-                    <li class="t_b" id="upd">Recently <span style="text-decoration:underline;">started learning MeteorJS</span></li>
-                </ul>
-            </div>
-            <br/><br/>
-            <div class="contact">
-                <div class="hdr">
-                    <p class="n_tt">Contact Me</p>
-                </div>
-                <div class="icons">
-                    <div id="email"><span class="fa fa-paper-plane-o"></span><div id="email_t"><a href="#"></a></div></div>
-                    <div id="fb"><span class="fa fa-facebook"></span><div id="fb_t"><a href="https://www.facebook.com/wole.obayomi.7" target="_blank"></a></div></div>
-                    <div id="twitter"><span class="fa fa-twitter"></span><div id="tw_t"><a href="https://twitter.com/WoleO94" target="_blank"></a></div></div>
-                </div>
+            <div class="bottom">
+                <div class="box green"></div>
+                <div class='box yellow'></div>
+                <div class="box orange"></div>
             </div>
         </div>
+        
+        <style>
+            .flex-container {
+                display:flex;
+                height:20em;
+                width:16em;
+                flex-direction:column;
+            } 
+            
+            .box {
+                height:60px;
+                width:60px;
+            }
+            
+            .red {
+                background-color:red;
+            }
+            
+            .green {
+                background-color:green;
+            }
+            
+            .orange {
+                background-color:orange;
+            }
+            
+            .blue {
+                background-color:blue;    
+            }
+            
+            .yellow {
+                background-color:yellow;    
+            }
+            
+            .top {
+                border:1px solid #f0f0f0;
+                height:14em;
+                width:100%;
+                display:flex;
+                flex-direction:column;
+            }
+            
+            .bottom {
+                border:1px solid #f0f0f0;
+                display:flex;
+                flex-direction:row;
+                align-items:center;
+                justify-content:center;
+            }
+        </style>
+        
     </body>
 </html>
