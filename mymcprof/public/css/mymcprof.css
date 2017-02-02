@@ -8,6 +8,7 @@ body {
   height:auto;
   display:flex;
   flex-direction:column;
+  overflow:hidden;
 }
 
 #mmp-bg {
@@ -149,8 +150,8 @@ body {
 .mmp-instr-hdr {
   margin:auto;
   text-align:center;
-  height:3em;
-  line-height:3em;
+  height:auto;
+  line-height:2em;
   font-family:"Source Sans Pro";
   font-weight:bold;
   font-size:1.5em;
