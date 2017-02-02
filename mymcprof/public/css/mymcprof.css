@@ -257,8 +257,8 @@ body {
   -webkit-animation:pulse 1s infinite;
   animation:pulse 1s infinite;
   -moz-animation:pulse 1s infinite;
-  top:0.45em;
-  left:19em;
+  top:40%;
+  left:calc(100% - 15px / 2);
   -webkit-animation-timing-function:ease;
 }
 
