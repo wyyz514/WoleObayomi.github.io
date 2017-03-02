@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/nami.css" />
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ceviche+One|Source+Sans+Pro:400:700" />
+    </head>
+    <body>
+        <div class="nami-menu">
+            <div class="nami-menu-items">
+                <div class="nami-menu-wrap">
+                    <div class="nami-menu-item nami-font nami-active" data-name="Home" data-target="#top">Home</div>
+                    <div class="nami-menu-item nami-font" data-name="About" data-target="#about"><a href="#about">About</a></div>
+                    <div class="nami-menu-item nami-font has-submenu" data-name="Instructions" data-target="#instructions">
+                        Instructions 
+                        <i class="nami-menu-trigger">&#9660;</i>
+                        <div class="nami-submenu">
+                            <div class="nami-menu-item nami-sub-item" data-name="Installation" data-target="#installation">Installation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nami-bar">
+            <div class="nami-bar-logo" id="demo-logo">Nami</div>
+            <div class="nami-bar-wrap">
+                <div class="nami-selected">
+                    <div class="nami-location nami-font"></div>
+                    <div class="nami-location-arr">&#9776;</div>
+                </div>
+            </div>
+        </div>
+        <div class="demo-content">
+            <div class="demo-bg" id="top">
+                <div class="demo-title">Nami</div>
+                <div class="demo-blurb">kawaii, flexible, customizable menu</div>
+            </div>
+            <div class="demo-section" id="about">
+                <div class="demo-section-title">About</div>
+                <div class="demo-section-body">
+                    Nami is intended to be a flexible, customizable menu for use in your website. Out of the box, Nami provides
+                    the following:
+                        <ul>
+                            <li>A nav bar with display for showing the current location on the page</li>
+                            <li>Support for submenus (nested as much as you want)</li>
+                            <li>Sleek and attractive interface</li>
+                        </ul>
+                    In addition, Nami allows you to register events on your menu items so you can do almost anything!
+                </div>
+            </div>
+            
+            <div class="demo-section"  id="instructions">
+                <div class="demo-section-title">Instructions</div>
+                <div class="demo-section-body">
+                    
+                   <div class="demo-sub-section" id="installation">
+                       <div class="demo-sub-section-title">Installation</div>
+                       <div class="demo-sub-section-body">
+                           <code>npm install nami-chan</code>
+                       </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            #demo-logo {
+                font-family: "Ceviche One";
+                font-size: 24px;
+                color: #5E82F7;
+            }
+            
+            .demo-content {
+                height: auto;
+                min-height: 95em;
+                width: 80%;
+                margin: auto;
+                margin-top: 4em;
+            }
+        
+            .demo-bg {
+                position: relative;
+                height: 15em;
+                width: 100%;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-direction: column;
+                -moz-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-direction: reverse;
+                -webkit-box-orient: vertical;
+                align-items: center;
+                -webkit-align-items: center;
+                -moz-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-justify-content: center;
+                -webkit-box-pack: center;
+		        -ms-flex-pack: center;
+            	-moz-justify-content: center;
+	            justify-content: center;
+                color: #5E82F7;
+                margin-bottom: 90px;
+            }
+            
+            .demo-bg:after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                height: 3px;
+                width: 1em;
+                left: calc((100% - 1em) / 2);
+                background-color: #5E82F7;
+            }
+            
+            .demo-title {
+                font-family: "Ceviche One";
+                font-size: 32px;
+                width: 100%;
+                text-align: center;
+                box-sizing: border-box;
+                padding: 10px;
+            }
+            
+            .demo-blurb {
+                font-family: "Source Sans Pro";
+                width: 100%;
+                font-size: 16px;
+                text-align: center;
+            }
+            
+            .demo-section, .demo-sub-section {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                box-sizing: border-box;
+                padding-top: 20px;    
+            }
+            
+            .demo-section {
+                width: 100%;
+                height: auto;
+                min-height: 10em;
+                font-family: "Source Sans Pro";
+            }
+            
+            .demo-section-title {
+                color: #5E82F7;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            
+            .demo-section-body {
+                font-size: 16px;    
+            }
+            
+            .demo-sub-section {
+                height: auto;
+                min-height: 5em;
+            }
+            
+            .demo-sub-section > div {
+                text-indent: 20px;    
+            }
+            
+            .demo-sub-section-title {
+                color: #5E82F7;
+                margin-bottom: 10px;
+                font-size: 14px;
+            }
+            
+            .demo-sub-section-body {
+                font-size: 14px;
+            }
+        </style>
+        <script src="js/nami.js"></script>
+    </body>
+</html>
