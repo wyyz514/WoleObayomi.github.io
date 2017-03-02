@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+      <title>Karuzel Test</title>
+  </head>
+  <body>
+    <div id="krzl-cont">
+      <div class="krzl-slide" id="red"></div>
+      <div class="krzl-slide"></div>
+      <div class="krzl-slide"></div>
+      <div class="krzl-slide"></div>
+      <div class="krzl-slide"></div>
+    </div>
+
+    <style>
+      body {
+        margin:0 !important;
+      }
+
+      #krzl-cont {
+        height:12em;
+        width:20em;
+        border: 1px dashed #000;
+        position:relative;
+        overflow-x:hidden;
+        margin:auto;
+      }
+
+      .krzl-slide {
+          float:left;
+          height:12em;
+          width:20em;
+          margin:0 auto;
+          border:1px solid;
+          flex-grow:2;
+      }
+
+      #red {
+          background-color:red;
+      }
+
+    </style>
+
+    <script src="./components.js"></script>
+  </body>
+</html>
