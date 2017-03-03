@@ -154,13 +154,20 @@ window.Nami = (function(){
             var current = window.scrollY || window.pageYOffset;
             var scrollTarget = document.querySelector(this.scrollTarget);
             var destination = scrollTarget.offsetTop - navbarHeight;
-            var scrollDirection = current > destination ? "UP" : "DOWN";
+            var scrollDirection = "STATIC";
             var rAF = requestAnimationFrame || webkitRequestAnimationFrame || mozRequestAnimationFrame || msRequestAnimationFrame || function (fn) {
                 setInterval(fn, 1000/60);
             };
             var cAF = cancelAnimationFrame || webkitCancelAnimationFrame || mozCancelAnimationFrame || msCancelRequestAnimationFrame;
             var reqId;
             
+            if(current < destination) 
+                scrollDirection = "DOWN";
+            else if(current > destination)
+                scrollDirection =  "UP";
+            else
+                scrollDirection = "STATIC";
+       
             function scroll() {
                 //console.log("Current: ", current, "Destination:", destination, "reqId:", reqId);
                 
@@ -173,11 +180,12 @@ window.Nami = (function(){
                     current = current - 5;
                     window.scrollTo(0, current);
                 }
-                else {
+                else if(scrollDirection === "DOWN") {
                     current = current + 5;
                     window.scrollTo(0, current);
                 }
-                
+                else
+                    return;
                 reqId = rAF(scroll);
             }
             
