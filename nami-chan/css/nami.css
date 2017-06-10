@@ -58,7 +58,9 @@ body {
 
 .nami-bar {
    height: 4em;
+   max-height: 64px;
    width: 100%;
+   max-width: 1160px;
    box-sizing: border-box;
    padding: 10px;
    border-bottom: 1px solid #cecece;
